@@ -1,0 +1,62 @@
+@import './variables.scss';
+@import './colors.scss';
+
+/* Scroll Menu */
+.scroll-menu {
+  position: relative;
+  overflow: auto;
+  white-space: nowrap;
+  margin-top: 24px;
+  scrollbar-width: none; /* Firefox fix*/
+  &::-webkit-scrollbar {
+    width: 0px; /* Chrome fix */
+  }
+  &::after,
+  &::before {
+    display: inline-block;
+    position: sticky;
+    content: '';
+    top: 177px;
+    right: 0;
+    width: 24px;
+    height: 40px;
+    background: linear-gradient(to right, $transparent, $bgColor) repeat-y;
+    @media screen and (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+  &::before {
+    left: 0;
+    background: linear-gradient(to left, $transparent, $bgColor) repeat-y;
+  }
+  @media screen and (min-width: $screen-md) {
+    margin-top: 32px;
+  }
+  @media screen and (min-width: $screen-lg) {
+    margin-top: 8px;
+    white-space: normal;
+    padding-left: 32px;
+  }
+}
+
+.scroll-menu__item {
+  color: $greyTextColor;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  padding: 7px 14px;
+  margin-right: 2px;
+  text-decoration: none;
+  @media screen and (min-width: $screen-lg) {
+    &:first-child {
+      margin-bottom: 8px;
+    }
+    margin-bottom: 0;
+  }
+}
+
+.scroll-menu__item.active {
+  background-color: $white;
+  border: 2px solid $scrollActiveColor;
+  border-radius: 5px;
+}

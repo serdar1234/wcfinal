@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -9,8 +9,139 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
+
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
+    <header>
+      <nav class="nav">
+        <div class="nav__left">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" aria-label="Меню" href="#"
+                ><i class="nav__icon nav__icon--burger"></i
+              ></a>
+            </li>
+            <li class="nav__item">
+              <div class="nav__divider-img"></div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#"
+                ><img class="nav__logo" src="img/logo.svg" alt="Логотип CPS"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__right">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" aria-label="Позвоните нам" href="#"
+                ><i class="nav__icon nav__icon--call"></i
+              ></a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" aria-label="Напишите нам" href="#"
+                ><i class="nav__icon nav__icon--chat"></i
+              ></a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" aria-label="Профиль пользователя" href="#"
+                ><i class="nav__icon nav__icon--profile"></i
+              ></a>
+            </li>
+            <li class="nav__item">
+              <div class="nav__divider-img"></div>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" aria-label="Оставить заявку" href="#">
+                <span class="nav__text">Оставить заявку</span>
+                <i class="nav__icon nav__icon--repair"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" aria-label="Статус ремонта" href="#">
+                <span class="nav__text">Статус ремонта</span>
+                <i class="nav__icon nav__icon--checkstatus"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="heading">
+        <h1 class="heading__h1">Услуги и сервисы</h1>
+      </div>
+      <div class="scrollmenu">
+        <a href="#" class="scrollmenu__item active">Ремонтируемые устройства</a>
+        <a href="#" class="scrollmenu__item">Дополнительные услуги</a>
+        <a href="#" class="scrollmenu__item">Цены на услуги</a>
+        <a href="#" class="scrollmenu__item">Специальные цены</a>
+        <a href="#" class="scrollmenu__item">Адреса сервисных центров</a>
+        <a href="#" class="scrollmenu__item">Отзывы</a>
+      </div>
+    </header>
+    <main>
+      <article class="first-block">
+        <div class="first-block__text">
+          <p class="first-block__text1"
+            >Мы являемся авторизованным сервисным центром по ремонту техники
+            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+            официальной гарантией производителя.</p
+          >
+          <p class="first-block__text2"
+            >Мы успешно работаем с 1992 года и заслужили репутацию надежного
+            партнера<span class="first-block__text3"
+              >, что подтверждает большое количество постоянных клиентов. Мы
+              гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.</span
+            ></p
+          >
+          <button class="first-block__button">
+            <span class="first-block__arrow-icon"> </span>
+            <p class="first-block__read-more">Читать далее</p>
+          </button>
+        </div>
+        <figure class="first-block__figure">
+          <picture>
+            <source
+              srcset="img/office_mobile.webp"
+              type="image/webp"
+              media="(max-width:767.98px)"
+            />
+            <source
+              srcset="img/office_mobile.png"
+              type="image/png"
+              media="(max-width:767.98px)"
+            />
+            <source
+              srcset="img/office_tablet.webp"
+              type="image/webp"
+              media="(min-width:768px) and (max-width:991.98px)"
+            />
+            <source
+              srcset="img/office_tablet.png"
+              type="image/png"
+              media="(min-width:768px) and (max-width:991.98px)"
+            />
+            <source
+              srcset="img/office.webp"
+              type="image/webp"
+              media="(min-width:992px)"
+            />
+            <source
+              srcset="img/office.png"
+              type="image/png"
+              media="(min-width:992px)"
+            />
+            <img
+              class="first-block__image"
+              src="img/office.png"
+              alt="Офис CPS"
+            />
+          </picture>
+        </figure>
+      </article>
+    </main>
+    <script
+      media="screen and (max-width:767.98px)"
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
   </body>
 </html>

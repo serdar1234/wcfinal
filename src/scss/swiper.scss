@@ -4,57 +4,60 @@
 // SWIPER
 .brands-swiper-section {
   display: block;
-  max-width: 768px;
   margin-inline: auto;
 }
 
-.swiper {
-  width: 100%;
-  height: 130px;
-  &::after,
-  &::before {
-    display: inline-block;
-    position: absolute;
-    content: '';
-    top: 14px;
-    right: 0;
-    width: 24px;
-    height: 80px;
-    background: linear-gradient(to right, $transparent, $bgColor) repeat-y;
-    z-index: 2;
-  }
-  &::before {
-    left: 0;
-    background: linear-gradient(to left, $transparent, $bgColor) repeat-y;
-  }
-  @media screen and (min-width: $screen-md) {
+.brands-swiper-section {
+  .swiper {
+    width: 100%;
+    height: 130px;
     &::after,
     &::before {
-      display: none;
+      display: inline-block;
+      position: absolute;
+      content: '';
+      top: 14px;
+      right: 0;
+      width: 24px;
+      height: 80px;
+      background: linear-gradient(to right, $transparent, $bgColor) repeat-y;
+      z-index: 2;
+    }
+    &::before {
+      left: 0;
+      background: linear-gradient(to left, $transparent, $bgColor) repeat-y;
+    }
+    @media screen and (min-width: $screen-md) {
+      &::after,
+      &::before {
+        display: none;
+      }
     }
   }
 }
 
-.swiper-slide {
-  display: flex;
-  width: 240px;
-  @media screen and (min-width: $screen-md) {
-    width: calc(100% / 3);
-    margin-right: 0 !important;
-    &:nth-child(n + 7) {
-      opacity: 0;
-      height: 0;
-      overflow: hidden;
-      transition: opacity 200ms linear, height 200ms linear;
+.swiper {
+  .swiper-slide {
+    display: flex;
+    width: 240px;
+    @media screen and (min-width: $screen-md) and (max-width: 991.98px) {
+      width: calc(100% / 3);
+      margin-right: 0 !important;
+      &:nth-child(n + 7) {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, height 200ms linear;
+      }
     }
-  }
-  @media screen and (min-width: $screen-lg) {
-    width: calc(100% / 4);
-    &:nth-child(n + 9) {
-      opacity: 0;
-      height: 0;
-      overflow: hidden;
-      transition: opacity 200ms linear, height 200ms linear;
+    @media screen and (min-width: $screen-lg) {
+      width: calc(100% / 4);
+      &:nth-child(n + 9) {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, height 200ms linear;
+      }
     }
   }
 }
@@ -87,9 +90,8 @@
 .swiper-pagination {
   display: block;
   --swiper-pagination-bullet-size: 12px;
-  --swiper-pagination-bottom: 14px;
-  --swiper-pagination-color: $swiperGrey;
-  --swiper-pagination-bullet-inactive-color: $lightGrey;
+  --swiper-pagination-color: #b5b6bc;
+  --swiper-pagination-bullet-inactive-color: #ddd;
   --swiper-pagination-bullet-inactive-opacity: 1;
   @media screen and (min-width: $screen-md) {
     display: none;

@@ -3,11 +3,10 @@ import '../scss/style.scss'
 // Brand icons
 const brands__list = document.querySelector('.brands__list')
 const allListItems = brands__list.querySelectorAll('.swiper-slide')
-
 // Toggle button and its elements
 const brands__button = document.querySelector('.brands__button')
 const brand__text = brands__button.querySelector('.brands__button-text')
-const brands__arrowIcon = brands__button.querySelector('.brands__arrow-icon')
+const brands__arrowIcon = brands__button.querySelector('.arrow-icon')
 
 function toggleBrands() {
   // If all brand items are displayed == true
@@ -15,11 +14,11 @@ function toggleBrands() {
     brand__text.textContent === 'Показать все' ? true : false
   // Change the text
   allItemsDisplayed
-    ? (brand__text.textContent = 'Скрыть')
-    : (brand__text.textContent = 'Показать все')
-
+  ? (brand__text.textContent = 'Скрыть')
+  : (brand__text.textContent = 'Показать все')
+  
   brands__list.classList.toggle('brands__list--show-brands')
-  brands__arrowIcon.classList.toggle('brands__arrow-icon--turned')
+  brands__arrowIcon.classList.toggle('arrow-icon--turned')
 }
 
 brands__button.addEventListener('click', toggleBrands)
@@ -53,6 +52,7 @@ function initializeSwiper() {
 }
 
 initializeSwiper()
+console.log('sw init 1st');
 
 // Adding data-hash attr to correct pagination
 allListItems.forEach((slide, index) => {
@@ -63,8 +63,10 @@ window.addEventListener('resize', function () {
   if (window.innerWidth >= 768 && swiper !== null) {
     // delete swiper
     swiper.destroy()
+    console.log('sw dest');
   } else {
     // initialize swiper again
     initializeSwiper()
+    console.log('sw init');
   }
 })

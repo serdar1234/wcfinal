@@ -1,8 +1,11 @@
+@import './variables.scss';
 @import './colors.scss';
 @import './fonts.scss';
+@media screen and (max-width: 767px) {
+  @import './swiper-bundle.min.scss';
+}
 @import './buttons.scss';
 @import './navigation.scss';
-@import './variables.scss';
 @import './heading.scss';
 @import './scroll_menu.scss';
 @import './first_block.scss';

@@ -52,7 +52,6 @@ function initializeSwiper() {
 }
 
 initializeSwiper()
-console.log('sw init 1st');
 
 // Adding data-hash attr to correct pagination
 allListItems.forEach((slide, index) => {
@@ -63,10 +62,8 @@ window.addEventListener('resize', function () {
   if (window.innerWidth >= 768 && swiper !== null) {
     // delete swiper
     swiper.destroy()
-    console.log('sw dest');
   } else {
     // initialize swiper again
     initializeSwiper()
-    console.log('sw init');
   }
 })

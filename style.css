@@ -418,7 +418,8 @@
 
 .brands-swiper-section {
   display: block;
-  margin-inline: auto; }
+  margin-inline: auto;
+  background-color: rebeccapurple; }
 
 .swiper {
   width: 100%;

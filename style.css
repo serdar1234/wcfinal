@@ -947,6 +947,10 @@
     .brands-swiper-section .swiper::after, .brands-swiper-section .swiper::before {
       display: none; } }
 
+.brands-swiper-section .swiper.swiper--hidden {
+  display: none;
+  z-index: 0; }
+
 .swiper .swiper-slide {
   display: flex;
   width: 240px; }
@@ -1128,7 +1132,8 @@
 html,
 body {
   background-color: #f8f8f8;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
 
 body * {
   font-size: inherit;

@@ -40,7 +40,7 @@
   .swiper-slide {
     display: flex;
     width: 240px;
-    @media screen and (min-width: $screen-md) and (max-width: 991.98px) {
+    @media screen and (min-width: $screen-md) and (max-width: 1023.98px) {
       width: calc(100% / 3);
       margin-right: 0 !important;
       &:nth-child(n + 7) {

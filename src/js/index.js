@@ -1,5 +1,9 @@
 import '../scss/style.scss'
 
+// Global variables
+const SCREEN_MD = 768;
+// const SCREEN_LG = 1024;
+
 // Brand icons
 const brands__list = document.querySelector('.brands__list')
 const allListItems = brands__list.querySelectorAll('.swiper-slide')
@@ -52,11 +56,11 @@ function initializeSwiper() {
 initializeSwiper()
 
 window.addEventListener("resize", function () {
-  if (window.innerWidth >= 768 && swiper !== null) {
+  if (window.innerWidth >= SCREEN_MD && swiper !== null) {
     // delete swiper
     swiper.destroy();
     swiper = null;
-  } else if (window.innerWidth < 768 && swiper === null) {
+  } else if (window.innerWidth < SCREEN_MD && swiper === null) {
     // initialize swiper again
     initializeSwiper();
   }

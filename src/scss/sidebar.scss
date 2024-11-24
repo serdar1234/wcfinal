@@ -1,6 +1,11 @@
 @import './variables.scss';
 @import './colors.scss';
 
+.sidebar.sidebar--hidden {
+  transform: translateX(-320px);
+  opacity: 0;
+}
+
 .sidebar {
   height: 100%;
   inset: 0 0;
@@ -17,6 +22,7 @@
   &::-webkit-scrollbar {
     width: 0px; /* hide in Chrome */
   }
+  transition: all 200ms ease-in;
 }
 
 .sidebar {
@@ -82,6 +88,14 @@
   a {
     margin-top: 6px;
     padding: 10px 24px;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 300ms;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    &:hover {
+      transform: translateX(8px) scale(1.1);
+    }
   }
 }
 

@@ -1,13 +1,9 @@
-const burgerBtn = document.querySelector('.nav__link--open-menu')
-const xBurgerBtn = document.querySelector('.nav__link--close-menu')
-const sideBar = document.querySelector('.sidebar')
-const fogOfWar = document.querySelector('.fog-of-war')
-const swiper = document.querySelector('.swiper')
+import { burgerBtn, xBurgerBtn, sideBar, fogOfWar, swiperSelector } from './variables.js';
 
 function toggleBurgerBtn() {
   sideBar.classList.toggle('sidebar--hidden')
   fogOfWar.classList.toggle('active')
-  swiper.classList.toggle('swiper--hidden')
+  swiperSelector.classList.toggle('swiper--hidden')
 }
 
 function burgerFunction() {

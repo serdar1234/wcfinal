@@ -601,22 +601,24 @@
       align-items: center; } }
 
 .nav__left {
-  width: 55%; }
+  width: 55%;
+  min-width: 176px; }
   @media screen and (min-width: 768px) {
     .nav__left {
       width: 50%; } }
   @media screen and (min-width: 1024px) {
     .nav__left {
       display: none; } }
-  @media screen and (min-width: 768px) {
-    .nav__left .nav__list {
-      justify-content: flex-start;
-      padding-left: 24px; } }
-  .nav__left .nav__list .nav__item:nth-child(2) {
-    display: none; }
-    @media screen and (min-width: 768px) {
-      .nav__left .nav__list .nav__item:nth-child(2) {
-        display: block; } }
+  .nav__left .nav__list {
+    justify-content: flex-start;
+    padding-left: 24px; }
+    .nav__left .nav__list .nav__item:first-child {
+      margin-right: 14px; }
+    .nav__left .nav__list .nav__item:nth-child(2) {
+      display: none; }
+      @media screen and (min-width: 768px) {
+        .nav__left .nav__list .nav__item:nth-child(2) {
+          display: block; } }
 
 .nav__right {
   width: 45%; }
@@ -1003,8 +1005,6 @@
 .sidebar.sidebar--hidden {
   left: -400px;
   opacity: 0; }
-  .sidebar.sidebar--hidden ~ header, .sidebar.sidebar--hidden ~ main {
-    overflow: initial; }
 
 .sidebar {
   height: 100%;
@@ -1024,8 +1024,6 @@
   .sidebar::-webkit-scrollbar {
     width: 0px;
     /* hide in Chrome */ }
-  .sidebar ~ header, .sidebar ~ main {
-    overflow: hidden; }
 
 .sidebar .nav__list {
   justify-content: flex-start;
@@ -1041,6 +1039,10 @@
   .sidebar .nav__list .nav__item.nav__item--moved-right {
     margin-left: auto;
     padding-right: 0; }
+
+@media screen and (min-width: 1024px) {
+  .sidebar__header .nav__list .nav__item:first-child {
+    display: none; } }
 
 .sidebar__links ul {
   padding: 16px 0px; }

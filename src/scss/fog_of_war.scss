@@ -1,0 +1,19 @@
+@import './variables.scss';
+@import './colors.scss';
+
+.fog-of-war {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter:opacity(0.96);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .fog-of-war.active {
+    display: block;
+  }

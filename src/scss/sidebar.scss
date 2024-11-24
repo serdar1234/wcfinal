@@ -2,8 +2,11 @@
 @import './colors.scss';
 
 .sidebar.sidebar--hidden {
-  transform: translateX(-320px);
+  transform: translateX(-400px);
   opacity: 0;
+  ~header, ~main {
+    overflow: initial;
+  }
 }
 
 .sidebar {
@@ -13,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 320px;
+  max-width: 360px;
   background: $white;
   z-index: 2;
   box-shadow: 16px 0 52px 0 $sidebarShadowClr;
@@ -22,7 +25,10 @@
   &::-webkit-scrollbar {
     width: 0px; /* hide in Chrome */
   }
-  transition: all 200ms ease-in;
+  transition: all 300ms ease-in-out;
+  ~header, ~main {
+    overflow: hidden;
+  }
 }
 
 .sidebar {

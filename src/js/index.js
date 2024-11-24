@@ -1,5 +1,7 @@
 import '../scss/style.scss'
+import { burgerFunction } from './sidebar';
 
+burgerFunction();
 // Global variables
 const SCREEN_MD = 768;
 // const SCREEN_LG = 1024;

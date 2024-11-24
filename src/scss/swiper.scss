@@ -36,10 +36,18 @@
   }
 }
 
+.brands-swiper-section {
+  .swiper.swiper--hidden {
+    display: none;
+    z-index: 0;
+  }
+}
+
 .swiper {
   .swiper-slide {
     display: flex;
     width: 240px;
+
     @media screen and (min-width: $screen-md) and (max-width: 1023.98px) {
       width: calc(100% / 3);
       margin-right: 0 !important;
@@ -50,6 +58,7 @@
         transition: opacity 200ms linear, height 200ms linear;
       }
     }
+
     @media screen and (min-width: $screen-lg) {
       width: calc(100% / 4);
       &:nth-child(n + 9) {

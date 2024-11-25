@@ -1101,6 +1101,9 @@
   margin-bottom: 12px; }
   .sidebar__contacts .nav__list.sidebar__list {
     height: auto; }
+  @media (min-height: 980px) {
+    .sidebar__contacts {
+      margin-top: 174px; } }
 
 .sidebar__phone-num a {
   color: #1b1c21;

@@ -4,7 +4,7 @@ import { SCREEN_MD, brands__button } from './variables.js';
 import { toggleBrandsFunction } from './brands.js';
 import { changeActiveLink } from './sidebarLinks.js';
 import { changeActiveBtn } from './sidebarBtns.js';
-import { changeActiveScrollLink } from './scrollMenu.js';
+import { changeActiveScrollLink } from './scrollMenuLinks.js'
 
 brands__button.addEventListener('click', toggleBrandsFunction);
 

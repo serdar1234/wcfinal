@@ -48,7 +48,7 @@
     display: flex;
     width: 240px;
 
-    @media screen and (min-width: $screen-md) and (max-width: 1023.98px) {
+    @media screen and (min-width: $screen-md) and (max-width: 1365.98px) {
       width: calc(100% / 3);
       margin-right: 0 !important;
       &:nth-child(n + 7) {
@@ -59,7 +59,7 @@
       }
     }
 
-    @media screen and (min-width: $screen-lg) {
+    @media screen and (min-width: $screen-xl) {
       width: calc(100% / 4);
       &:nth-child(n + 9) {
         opacity: 0;

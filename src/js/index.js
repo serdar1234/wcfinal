@@ -1,30 +1,10 @@
 import '../scss/style.scss'
 import { burgerFunction } from './sidebar';
-import { SCREEN_MD } from './variables.js';
-
-// Brand icons
-const brands__list = document.querySelector('.brands__list');
-
-// Toggle button and its elements
-const brands__button = document.querySelector('.brands__button');
-const brand__text = brands__button.querySelector('.brands__button-text');
-const brands__arrowIcon = brands__button.querySelector('.arrow-icon');
+import { SCREEN_MD, brands__button } from './variables.js';
+import { toggleBrandsFunction } from './brands.js';
 
 
-function toggleBrands() {
-  // If all brand items are displayed == true
-  let allItemsDisplayed = brand__text.textContent === 'Показать все';
-  // Change the text
-  allItemsDisplayed
-  ? (brand__text.textContent = 'Скрыть')
-  : (brand__text.textContent = 'Показать все');
-  
-  brands__list.classList.toggle('brands__list--show-brands');
-  brands__arrowIcon.classList.toggle('arrow-icon--turned');
-}
-
-brands__button.addEventListener('click', toggleBrands);
-
+brands__button.addEventListener('click', toggleBrandsFunction);
 
 burgerFunction();
 

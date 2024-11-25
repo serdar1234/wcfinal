@@ -956,7 +956,7 @@
 .swiper .swiper-slide {
   display: flex;
   width: 240px; }
-  @media screen and (min-width: 768px) and (max-width: 1023.98px) {
+  @media screen and (min-width: 768px) and (max-width: 1365.98px) {
     .swiper .swiper-slide {
       width: calc(100% / 3);
       margin-right: 0 !important; }
@@ -965,7 +965,7 @@
         height: 0;
         overflow: hidden;
         transition: opacity 200ms linear, height 200ms linear; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1366px) {
     .swiper .swiper-slide {
       width: calc(100% / 4); }
       .swiper .swiper-slide:nth-child(n + 9) {
@@ -1005,6 +1005,10 @@
 .sidebar.sidebar--hidden {
   left: -400px;
   opacity: 0; }
+  @media screen and (min-width: 1024px) {
+    .sidebar.sidebar--hidden {
+      left: 0;
+      opacity: 1; } }
 
 .sidebar {
   height: 100%;
@@ -1024,6 +1028,12 @@
   .sidebar::-webkit-scrollbar {
     width: 0px;
     /* hide in Chrome */ }
+  @media screen and (min-width: 1024px) {
+    .sidebar {
+      width: 306px;
+      position: fixed;
+      box-shadow: none;
+      transition: none; } }
 
 .sidebar .nav__list {
   justify-content: flex-start;
@@ -1148,6 +1158,11 @@ main {
   position: relative;
   max-width: 1120px;
   margin: 0 auto; }
+  @media screen and (min-width: 1024px) {
+    header,
+    main {
+      width: calc(100% - 306px);
+      left: 153px; } }
 
 
 /*# sourceMappingURL=style.css.map*/

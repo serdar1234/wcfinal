@@ -1034,6 +1034,9 @@
       position: fixed;
       box-shadow: none;
       transition: none; } }
+  @media screen and (min-width: 1500px) {
+    .sidebar {
+      left: calc((100% - 1500px) / 2); } }
 
 .sidebar .nav__list {
   justify-content: flex-start;
@@ -1156,7 +1159,7 @@ body * {
 header,
 main {
   position: relative;
-  max-width: 1120px;
+  max-width: 1194px;
   margin: 0 auto; }
   @media screen and (min-width: 1024px) {
     header,

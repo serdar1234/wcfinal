@@ -1,13 +1,13 @@
 import '../scss/style.scss'
-import { burgerFunction } from './sidebar';
+import { burgerFunction } from './burger.js';
 import { SCREEN_MD, brands__button } from './variables.js';
 import { toggleBrandsFunction } from './brands.js';
-
+import { changeActiveLink } from './sidebarLinks.js';
 
 brands__button.addEventListener('click', toggleBrandsFunction);
 
 burgerFunction();
-
+changeActiveLink();
 // **************** Swiper *************
 let swiper = null
 

@@ -8,6 +8,10 @@
     left: 0;
     opacity: 1;
   }
+    
+  @media screen and (min-width: $screen-xxl) {
+    left: calc((100% - 1500px) / 2);
+  }
 }
 
 .sidebar {
@@ -33,10 +37,6 @@
     position: fixed;
     box-shadow: none;
     transition: none;
-  }
-  
-  @media screen and (min-width: $screen-xxl) {
-    left: calc((100% - 1500px) / 2);
   }
 }
 

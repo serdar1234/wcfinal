@@ -9,7 +9,7 @@ import {
 
 function toggleBurgerBtn() {
   sideBar.classList.toggle('sidebar--hidden')
-  fogOfWar.classList.toggle('active')
+  fogOfWar.classList.toggle('fog-of-war--active')
   swiperSelector.classList.toggle('swiper--hidden')
 }
 
@@ -21,7 +21,7 @@ function burgerFunction() {
   window.addEventListener('resize', function () {
     if (window.innerWidth >= SCREEN_LG) {
       sideBar.classList.add('sidebar--hidden')
-      fogOfWar.classList.remove('active')
+      fogOfWar.classList.remove('fog-of-war--active')
       swiperSelector.classList.remove('swiper--hidden')
     }
   })

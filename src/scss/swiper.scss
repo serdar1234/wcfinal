@@ -61,6 +61,7 @@
 
     @media screen and (min-width: $screen-xl) {
       width: calc(100% / 4);
+      margin-right: 0 !important;
       &:nth-child(n + 9) {
         opacity: 0;
         height: 0;

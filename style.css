@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%; }
 
-.fog-of-war.active {
+.fog-of-war--active {
   display: block; }
 
 @media screen and (max-width: 767px) {
@@ -790,7 +790,7 @@
       .scroll-menu__item:first-child {
         margin-bottom: 8px; } }
 
-.scroll-menu__item.active {
+.scroll-menu__item--active {
   background-color: #fff;
   border: 2px solid #b8ffec;
   border-radius: 5px; }
@@ -967,7 +967,8 @@
         transition: opacity 200ms linear, height 200ms linear; } }
   @media screen and (min-width: 1366px) {
     .swiper .swiper-slide {
-      width: calc(100% / 4); }
+      width: calc(100% / 4);
+      margin-right: 0 !important; }
       .swiper .swiper-slide:nth-child(n + 9) {
         opacity: 0;
         height: 0;

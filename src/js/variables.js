@@ -20,3 +20,14 @@ export const brandsArrowIcon = brandsButton.querySelector('.arrow-icon');
 // Header
 export const scrollLinks = document.querySelector('.scroll-menu');
 
+// Read more
+// Text blocks
+export const firstBlock = document.querySelector(".first-block");
+export const text2 = firstBlock.querySelectorAll(".first-block__text2");
+export const text3 = firstBlock.querySelectorAll(".first-block__text3");
+
+// Toggle button and its elements
+export const readButton = firstBlock.querySelector(".first-block__button");
+export const buttonText = readButton.querySelector(".first-block__read-more");
+export const buttonArrow = readButton.querySelector(".arrow-icon");
+

@@ -1,52 +1,58 @@
-import '../scss/style.scss'
+import '../scss/style.scss';
 import { burgerFunction } from './burger.js';
-import { SCREEN_MD, brandsButton } from './variables.js';
+import { SCREEN_MD, brandsButton, readButton } from './variables.js';
 import { toggleBrandsFunction } from './brands.js';
 import { changeActiveLink } from './sidebarLinks.js';
 import { changeActiveBtn } from './sidebarBtns.js';
-import { changeActiveScrollLink } from './scrollMenuLinks.js'
+import { changeActiveScrollLink } from './scrollMenuLinks.js';
+import { toggleText } from './readMore.js';
+import { rearrangeFigure } from './rearrangeFigure.js';
 
 brandsButton.addEventListener('click', toggleBrandsFunction);
+readButton.addEventListener('click', toggleText);
 burgerFunction();
 changeActiveLink();
 changeActiveBtn();
 changeActiveScrollLink();
+rearrangeFigure();
+// Listen for resize events
+window.addEventListener('resize', rearrangeFigure);
 
-// **************** Swiper *************
+// Swiper
+let swiper;
+
 function initializeSwiper() {
-  const mediaQuery = window.matchMedia('(max-width:767.98px)').matches
-
-  if (mediaQuery) {
-    swiper = new Swiper(".swiper", {
+  if (window.matchMedia('(max-width:767.98px)').matches) {
+    swiper = new Swiper('.swiper', {
       // Optional parameters
-      slidesPerView: "auto",
+      slidesPerView: 'auto',
       loop: true,
       spaceBetween: 16,
       // For accessibility
       keyboard: {
         enabled: true,
-        onlyInViewport: false,
+        onlyInViewport: false
       },
       pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
         dynamicBullets: true,
-        dynamicMainBullets: 8,
-      },
-    });
+        dynamicMainBullets: 8
+      }
+    })
   }
 }
 
-let swiper = null
+if (window.innerWidth < SCREEN_MD) {
+  initializeSwiper();
+}
 
-initializeSwiper();
-
-window.addEventListener("resize", function () {
-  if (window.innerWidth >= SCREEN_MD && swiper !== null) {
+window.addEventListener('resize', function () {
+  if (window.innerWidth >= SCREEN_MD && swiper !== undefined) {
     // delete swiper
     swiper.destroy();
-    swiper = null;
-  } else if (window.innerWidth < SCREEN_MD && swiper === null) {
+    swiper = undefined;
+  } else if (window.innerWidth < SCREEN_MD && swiper === undefined) {
     // initialize swiper again
     initializeSwiper();
   }
-});
+})

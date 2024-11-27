@@ -77,7 +77,7 @@
     @media screen and (min-width: $screen-md) {
       &:nth-child(n + 7) {
         opacity: 1;
-        height: 70px;
+        height: 72px;
         flex-grow: 0;
         padding-bottom: 2px;
         transition: opacity 200ms linear, height 200ms linear;
@@ -89,7 +89,7 @@
     @media screen and (min-width: $screen-lg) {
       &:nth-child(n + 9) {
         opacity: 1;
-        height: 70px;
+        height: 72px;
         padding-bottom: 2px;
         transition: opacity 200ms linear, height 200ms linear;
       }

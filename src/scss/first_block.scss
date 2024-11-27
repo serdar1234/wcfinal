@@ -2,53 +2,59 @@
 @import './colors.scss';
 
 .first-block {
-  -webkit-margin-before: 8px;
-  @media screen and (min-width: $screen-md) {
-    display: flex;
-    justify-content: center;
-    padding: 24px;
-    -webkit-padding-before: 8px;
-  }
-  @media screen and (min-width: $screen-lg) {
-    padding: 0 24px;
-    -webkit-padding-before: 0;
-  }
-}
-
-.first-block__text {
   font-size: 14px;
   letter-spacing: 0.2px;
   line-height: 18px;
-  margin: 24px 16px;
+  margin-top: 24px;
   margin-bottom: 16px;
-  -webkit-margin-before: 8px;
+  br {
+    display: none;
+    opacity: 0;
+    margin: 4px;
+    &:first-of-type {
+      display: block;
+    }
+  }
+  span {
+    margin-inline: 16px;
+    @media screen and (min-width: $screen-md) {
+      margin-inline: 0;
+    }
+  }
   @media screen and (min-width: $screen-md) {
-    display: flex;
-    flex-direction: column;
-    margin: 8px 48px 16px 0;
+    display: block;
+    padding: 24px;
     line-height: 20px;
   }
   @media screen and (min-width: $screen-lg) {
-    margin: 14px 20px 16px 10px;
+    padding: 0 24px;
+  }
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
   }
 }
 
 .first-block__text1 {
-  @media screen and (min-width: $screen-md) {
-    margin-bottom: 20px;
-  }
+  display: block;
 }
-
 .first-block__text2 {
   display: none;
   @media screen and (min-width: $screen-md) {
     display: block;
-    order: 1;
   }
 }
+
 .first-block__text3 {
-  @media screen and (min-width: $screen-md) and (max-width: $screen-lg) {
-    display: none;
+  display: none;
+}
+
+.first-block.first-block__text--show {
+  .first-block__text2,
+  .first-block__text3,
+  br {
+    display: block;
   }
 }
 
@@ -64,15 +70,17 @@
 
 .first-block__figure {
   @media screen and (min-width: $screen-md) {
-    padding-top: 7px;
-    min-width: 50%;
+    padding: 7px;
+    padding-right: 0;
+    width: 50%;
+    float: right;
   }
 }
 
 .first-block__image {
   @media screen and (min-width: $screen-md) {
-  border-radius: 6px;
-  aspect-ratio: 5/3;
+    border-radius: 6px;
+    aspect-ratio: 5/3;
   }
   @media screen and (min-width: $screen-md) {
     aspect-ratio: 16/9;

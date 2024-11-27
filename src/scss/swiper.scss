@@ -28,6 +28,7 @@
       background: linear-gradient(to left, $transparent, $bgColor) repeat-y;
     }
     @media screen and (min-width: $screen-md) {
+      height: auto;
       &::after,
       &::before {
         display: none;

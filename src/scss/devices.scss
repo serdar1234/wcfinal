@@ -1,0 +1,23 @@
+@import './variables.scss';
+@import './colors.scss';
+
+.devices.swiper-section {
+  .swiper {
+    height: 220px;
+    @media screen and (min-width: $screen-md) {
+      height: auto;
+    }
+  }
+}
+
+#devices__list {
+  .section {
+    &__item {
+      height: 160px;
+      background-position: 92% 86%;
+    }
+    &__link {
+      padding: 16px;
+    }
+  }
+}

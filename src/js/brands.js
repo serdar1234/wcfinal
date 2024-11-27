@@ -8,6 +8,6 @@ export function toggleBrandsFunction() {
     ? (brandText.textContent = 'Скрыть')
     : (brandText.textContent = 'Показать все');
     
-    brandsList.classList.toggle('brands__list--show-brands');
+    brandsList.classList.toggle('section__list--show-items');
     brandsArrowIcon.classList.toggle('arrow-icon--turned');
   }

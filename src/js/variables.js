@@ -12,9 +12,9 @@ export const fogOfWar = document.querySelector('.fog-of-war');
 export const swiperSelector = document.querySelector('.swiper');
 
 // Brand icons
-export const brandsList = document.querySelector('.brands__list');
-export const brandsButton = document.querySelector('.brands__button');
-export const brandText = brandsButton.querySelector('.brands__button-text');
+export const brandsList = document.querySelector('#brands__list');
+export const brandsButton = document.querySelector('#brands__btn');
+export const brandText = brandsButton.querySelector('.section__button-text');
 export const brandsArrowIcon = brandsButton.querySelector('.arrow-icon');
 
 // Header

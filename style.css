@@ -1215,9 +1215,16 @@
 
 .price.swiper-section .price__header {
   display: none; }
+  .price.swiper-section .price__header th {
+    font-size: 14px;
+    line-height: 16px;
+    color: #7e7e82;
+    text-align: left;
+    font-weight: normal;
+    padding: 16px; }
   @media screen and (min-width: 768px) {
     .price.swiper-section .price__header {
-      display: block; } }
+      display: table-row; } }
 
 .price.swiper-section .price__item {
   display: flex;
@@ -1225,9 +1232,14 @@
   justify-content: flex-start;
   width: 260px;
   height: 200px;
-  background-color: #fff;
+  background-color: red;
   margin: 16px;
   border-radius: 6px; }
+  @media screen and (min-width: 768px) {
+    .price.swiper-section .price__item {
+      display: table-row;
+      height: 64px;
+      background-color: initial; } }
 
 .price__item > td {
   display: block;
@@ -1255,6 +1267,40 @@
     position: absolute;
     bottom: 16px;
     right: 16px; }
+    @media screen and (min-width: 768px) {
+      .price__item > td:last-child {
+        display: table-cell;
+        position: static; } }
+
+@media screen and (min-width: 768px) {
+  .price .swiper {
+    border-collapse: collapse;
+    width: calc(100% - 48px);
+    margin-inline: 24px; } }
+
+@media screen and (min-width: 1024px) {
+  .price .swiper {
+    width: calc(100% - 62px);
+    margin-inline: 32px; } }
+
+@media screen and (min-width: 768px) {
+  .price__item > td {
+    border-bottom: 5px solid #eaeaea;
+    background-color: #fff;
+    display: table-cell;
+    padding: 16px; } }
+
+.price__item:first-child td:first-child {
+  border-top-left-radius: 6px; }
+
+.price__item:first-child td:last-child {
+  border-top-right-radius: 6px; }
+
+.price__item:last-child td:first-child {
+  border-bottom-left-radius: 6px; }
+
+.price__item:last-child td:last-child {
+  border-bottom-right-radius: 6px; }
 
 * {
   margin: 0;

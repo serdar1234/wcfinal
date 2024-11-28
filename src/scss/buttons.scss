@@ -34,7 +34,6 @@
   }
 }
 
-
 .arrow-icon {
   align-self: center;
   padding-inline: 7px;
@@ -49,4 +48,24 @@
 
 .arrow-icon.arrow-icon--turned {
   transform: scale(-1);
+}
+
+.price__btn {
+  display: block;
+  position: relative;
+  background: $rose url(../img/dropdown.svg) 100px 11px no-repeat;
+  width: 119px;
+  height: 32px;
+  border: none;
+  border-radius: 16px;
+  &::before {
+    content: 'ЗАКАЗАТЬ';
+    color: $white;
+    position: absolute;
+    transform: translateY(-50%) translateX(-70%);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+  }
 }

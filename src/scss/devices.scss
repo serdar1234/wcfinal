@@ -7,6 +7,10 @@
     @media screen and (min-width: $screen-md) {
       height: auto;
     }
+    &::after,
+    &::before {
+      height: 168px;
+    }
   }
 }
 

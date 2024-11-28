@@ -1,0 +1,79 @@
+@import './variables.scss';
+@import './colors.scss';
+
+.price.swiper-section {
+  .swiper {
+    height: 260px;
+    @media screen and (min-width: $screen-md) {
+      height: auto;
+    }
+    &::after,
+    &::before {
+      height: 206px;
+    }
+  }
+}
+
+.price.swiper-section {
+  .price {
+    &__header {
+      display: none;
+      @media screen and (min-width: $screen_md) {
+        display: block;
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 260px;
+      height: 200px;
+      background-color: $white;
+      margin: 16px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.price__item {
+  > td {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    margin-top: 16px;
+    margin-left: 16px;
+    &::before {
+      line-height: 16px;
+      color: $greyTextColor;
+      display: block;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      @media screen and (min-width: $screen_md) {
+        display: none;
+      }
+    }
+    &:first-child {
+      &::before {
+        content: 'Ремонтные услуги';
+      }
+    }
+    &:nth-child(2) {
+      &::before {
+        content: 'Цена';
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        content: 'Срок';
+      }
+    }
+    &:last-child {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+}
+

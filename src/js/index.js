@@ -44,11 +44,6 @@ function initializeSwiper() {
       slidesPerView: 'auto',
       loop: true,
       spaceBetween: 16,
-      // For accessibility
-      keyboard: {
-        enabled: true,
-        onlyInViewport: false
-      },
       pagination: {
         el: '.swiper-pagination',
         dynamicBullets: true,

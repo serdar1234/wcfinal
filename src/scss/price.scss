@@ -18,8 +18,16 @@
   .price {
     &__header {
       display: none;
+      th {
+        font-size: 14px;
+        line-height: 16px;
+        color: $greyTextColor;
+        text-align: left;
+        font-weight: normal;
+        padding: 16px;
+      }
       @media screen and (min-width: $screen_md) {
-        display: block;
+        display: table-row;
       }
     }
 
@@ -29,9 +37,14 @@
       justify-content: flex-start;
       width: 260px;
       height: 200px;
-      background-color: $white;
+      background-color: red;
       margin: 16px;
       border-radius: 6px;
+      @media screen and (min-width: $screen_md) {
+        display: table-row;
+        height: 64px;
+        background-color: initial;
+      }
     }
   }
 }
@@ -73,7 +86,53 @@
       position: absolute;
       bottom: 16px;
       right: 16px;
+      @media screen and (min-width: $screen_md) {
+        display: table-cell;
+        position: static;
+      }
     }
   }
 }
 
+.price .swiper {
+  @media screen and (min-width: $screen_md) {
+    border-collapse: collapse;
+    width: calc(100% - 48px);
+    margin-inline: 24px;
+  }
+  @media screen and (min-width: $screen_lg) {
+    width: calc(100% - 62px);
+    margin-inline: 32px;
+  }
+}
+
+.price__item {
+  > td {
+    @media screen and (min-width: $screen_md) {
+      border-bottom: 5px solid $brandsItemBorderClr;
+      background-color: $white;
+      display: table-cell;
+      padding: 16px;
+    }
+  }
+  &:first-child {
+    td {
+      &:first-child {
+        border-top-left-radius: 6px;
+      }
+      &:last-child {
+        border-top-right-radius: 6px;
+      }
+    }
+  }
+  &:last-child {
+    td {
+      &:first-child {
+        border-bottom-left-radius: 6px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 6px;
+      }
+    }
+  }
+}

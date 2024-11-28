@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'TTLakes';
   src: url(./fonts/TTLakes-Bold.woff) format("woff");
@@ -562,6 +563,24 @@
 .arrow-icon.arrow-icon--turned {
   transform: scale(-1); }
 
+.price__btn {
+  display: block;
+  position: relative;
+  background: #FF3E79 url(./static/dropdown.svg) 100px 11px no-repeat;
+  width: 119px;
+  height: 32px;
+  border: none;
+  border-radius: 16px; }
+  .price__btn::before {
+    content: 'ЗАКАЗАТЬ';
+    color: #fff;
+    position: absolute;
+    transform: translateY(-50%) translateX(-70%);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px; }
+
 /* Icons */
 .nav__icon--burger {
   background-image: url(./static/burger.svg); }
@@ -946,6 +965,8 @@
   @media screen and (min-width: 768px) {
     .devices.swiper-section .swiper {
       height: auto; } }
+  .devices.swiper-section .swiper::after, .devices.swiper-section .swiper::before {
+    height: 168px; }
 
 #devices__list .section__item {
   height: 160px;
@@ -1183,6 +1204,57 @@
       .sidebar__button li button[disabled] {
         color: grey;
         cursor: default; }
+
+.price.swiper-section .swiper {
+  height: 260px; }
+  @media screen and (min-width: 768px) {
+    .price.swiper-section .swiper {
+      height: auto; } }
+  .price.swiper-section .swiper::after, .price.swiper-section .swiper::before {
+    height: 206px; }
+
+.price.swiper-section .price__header {
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .price.swiper-section .price__header {
+      display: block; } }
+
+.price.swiper-section .price__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 260px;
+  height: 200px;
+  background-color: #fff;
+  margin: 16px;
+  border-radius: 6px; }
+
+.price__item > td {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  margin-top: 16px;
+  margin-left: 16px; }
+  .price__item > td::before {
+    line-height: 16px;
+    color: #7e7e82;
+    display: block;
+    margin-bottom: 4px;
+    white-space: nowrap; }
+    @media screen and (min-width: 768px) {
+      .price__item > td::before {
+        display: none; } }
+  .price__item > td:first-child::before {
+    content: 'Ремонтные услуги'; }
+  .price__item > td:nth-child(2)::before {
+    content: 'Цена'; }
+  .price__item > td:nth-child(3)::before {
+    content: 'Срок'; }
+  .price__item > td:last-child {
+    position: absolute;
+    bottom: 16px;
+    right: 16px; }
 
 * {
   margin: 0;

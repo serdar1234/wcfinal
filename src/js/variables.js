@@ -11,7 +11,6 @@ export const sidebarButtons = sideBar.querySelector('.sidebar__button > ul');
 export const fogOfWar = document.querySelector('.fog-of-war');
 
 // Swiper
-export const swiperSelector = document.querySelector('.swiper');
 export const swiperContainers = document.querySelectorAll('.swiper');
 
 // Brands

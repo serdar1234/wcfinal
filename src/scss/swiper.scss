@@ -55,7 +55,7 @@
       &:nth-child(n + 7) {
         opacity: 0;
         height: 0;
-        overflow: hidden;
+        overflow: hidden; 
         transition: opacity 200ms linear, height 200ms linear;
       }
     }

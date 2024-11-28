@@ -11,11 +11,17 @@ export const sidebarButtons = sideBar.querySelector('.sidebar__button > ul');
 export const fogOfWar = document.querySelector('.fog-of-war');
 export const swiperSelector = document.querySelector('.swiper');
 
-// Brand icons
+// Brands
 export const brandsList = document.querySelector('#brands__list');
 export const brandsButton = document.querySelector('#brands__btn');
 export const brandText = brandsButton.querySelector('.section__button-text');
 export const brandsArrowIcon = brandsButton.querySelector('.arrow-icon');
+
+// Devices
+export const devsList = document.querySelector('#devices__list');
+export const devsButton = document.querySelector('#devices__btn');
+export const devsText = devsButton.querySelector('.section__button-text');
+export const devsArrowIcon = devsButton.querySelector('.arrow-icon');
 
 // Header
 export const scrollLinks = document.querySelector('.scroll-menu');

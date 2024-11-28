@@ -1,6 +1,6 @@
-import { brandText, brandsList, brandsArrowIcon } from './variables.js';
+// import { brandText, brandsList, brandsArrowIcon } from './variables.js';
 
-export function toggleBrandsFunction() {
+export function toggleBrandsFunction(brandText, brandsList, brandsArrowIcon) {
     // If all brand items are displayed == true
     let allItemsDisplayed = brandText.textContent === 'Показать все';
     // Change the text

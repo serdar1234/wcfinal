@@ -1,25 +1,41 @@
-import '../scss/style.scss';
-import { burgerFunction } from './burger.js';
-import { SCREEN_MD, brandsButton, readButton } from './variables.js';
-import { toggleBrandsFunction } from './brands.js';
-import { changeActiveLink } from './sidebarLinks.js';
-import { changeActiveBtn } from './sidebarBtns.js';
-import { changeActiveScrollLink } from './scrollMenuLinks.js';
-import { toggleText } from './readMore.js';
-import { rearrangeFigure } from './rearrangeFigure.js';
+import '../scss/style.scss'
+import { burgerFunction } from './burger.js'
+import {
+  SCREEN_MD,
+  brandsButton,
+  readButton,
+  brandText,
+  brandsList,
+  brandsArrowIcon,
+  devsButton,
+  devsText,
+  devsList,
+  devsArrowIcon
+} from './variables.js'
+import { toggleBrandsFunction } from './brands.js'
+import { changeActiveLink } from './sidebarLinks.js'
+import { changeActiveBtn } from './sidebarBtns.js'
+import { changeActiveScrollLink } from './scrollMenuLinks.js'
+import { toggleText } from './readMore.js'
+import { rearrangeFigure } from './rearrangeFigure.js'
 
-brandsButton.addEventListener('click', toggleBrandsFunction);
-readButton.addEventListener('click', toggleText);
-burgerFunction();
-changeActiveLink();
-changeActiveBtn();
-changeActiveScrollLink();
-rearrangeFigure();
+brandsButton.addEventListener('click', () => {
+  toggleBrandsFunction(brandText, brandsList, brandsArrowIcon);
+})
+devsButton.addEventListener('click', () => {
+  toggleBrandsFunction(devsText, devsList, devsArrowIcon);
+})
+readButton.addEventListener('click', toggleText)
+burgerFunction()
+changeActiveLink()
+changeActiveBtn()
+changeActiveScrollLink()
+rearrangeFigure()
 // Listen for resize events
-window.addEventListener('resize', rearrangeFigure);
+window.addEventListener('resize', rearrangeFigure)
 
 // Swiper
-let swiper;
+let swiper
 
 function initializeSwiper() {
   if (window.matchMedia('(max-width:767.98px)').matches) {
@@ -43,16 +59,16 @@ function initializeSwiper() {
 }
 
 if (window.innerWidth < SCREEN_MD) {
-  initializeSwiper();
+  initializeSwiper()
 }
 
 window.addEventListener('resize', function () {
   if (window.innerWidth >= SCREEN_MD && swiper !== undefined) {
     // delete swiper
-    swiper.destroy();
-    swiper = undefined;
+    swiper.destroy()
+    swiper = undefined
   } else if (window.innerWidth < SCREEN_MD && swiper === undefined) {
     // initialize swiper again
-    initializeSwiper();
+    initializeSwiper()
   }
 })

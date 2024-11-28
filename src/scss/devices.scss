@@ -21,3 +21,52 @@
     }
   }
 }
+
+#devices__list {
+  .swiper-slide {
+
+    @media screen and (min-width: $screen-md) and (max-width: 1365.98px) {
+      &:nth-child(n + 4) {
+        opacity: 0;
+        height: 0;
+        overflow: hidden; 
+        transition: opacity 200ms linear, height 200ms linear;
+      }
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      &:nth-child(n + 5) {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, height 200ms linear;
+      }
+    }
+  }
+}
+
+
+#devices__list.section__list--show-items {
+  .swiper-slide {
+    @media screen and (min-width: $screen-md) {
+      &:nth-child(n + 4) {
+        opacity: 1;
+        height: 160px;
+        flex-grow: 0;
+        padding-bottom: 2px;
+        transition: opacity 200ms linear, height 200ms linear;
+      }
+      &:last-child {
+        margin-bottom: 24px;
+      }
+    }
+    @media screen and (min-width: $screen-lg) {
+      &:nth-child(n + 5) {
+        opacity: 1;
+        height: 160px;
+        padding-bottom: 2px;
+        transition: opacity 200ms linear, height 200ms linear;
+      }
+    }
+  }
+}

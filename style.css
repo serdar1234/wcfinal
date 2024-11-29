@@ -570,7 +570,8 @@
   width: 119px;
   height: 32px;
   border: none;
-  border-radius: 16px; }
+  border-radius: 16px;
+  transition: all 300ms ease-out; }
   .price__btn::before {
     content: 'ЗАКАЗАТЬ';
     color: #fff;
@@ -580,6 +581,10 @@
     font-size: 12px;
     line-height: 24px;
     letter-spacing: -0.15px; }
+  .price__btn:hover {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    transform: scale(1.1); }
 
 /* Icons */
 .nav__icon--burger {
@@ -1317,6 +1322,36 @@
     border-bottom-left-radius: 6px; }
   .price__item:last-child td:last-child {
     border-bottom-right-radius: 6px; } }
+
+.price__info {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px; }
+  @media screen and (min-width: 768px) {
+    .price__info {
+      max-width: 421px; } }
+
+.price__offer {
+  font-weight: 500; }
+  .price__offer > a {
+    text-decoration: none; }
+
+.price__offer, .price__info {
+  padding-top: 16px;
+  margin-inline: 16px; }
+  @media screen and (min-width: 768px) {
+    .price__offer, .price__info {
+      margin-inline: 24px; } }
+  @media screen and (min-width: 1024px) {
+    .price__offer, .price__info {
+      margin-inline: 32px; } }
+
+.price__arrow {
+  background: url('data:image/svg+xml,<svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.8 4.99994L0.791554 2.229C0.3641 1.83529 0.361125 1.16138 0.785088 0.763917L0.920293 0.637162C1.30321 0.278177 1.89851 0.276333 2.28364 0.632939L6.93812 4.94264C6.9715 4.97355 6.9715 5.02633 6.93812 5.05723L2.34674 9.30851C1.92606 9.69803 1.27582 9.69601 0.857554 9.30389C0.394457 8.86974 0.397706 8.13363 0.864616 7.70358L3.8 4.99994Z" fill="%23FF3E79"/></svg>') no-repeat;
+  width: 7px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 16px; }
 
 * {
   margin: 0;

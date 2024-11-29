@@ -3,12 +3,19 @@
 
 .price.swiper-section {
   margin-bottom: 40px;
+  .section__heading {
+    margin-bottom: 16px;
+  }
+
   @media screen and (min-width: $screen-md) {
     margin-bottom: 48px;
   }
+
   .swiper {
     height: 260px;
+
     @media screen and (min-width: $screen-md) {
+      margin-bottom: 16px;
       height: auto;
     }
     &::after,
@@ -30,6 +37,7 @@
         font-weight: normal;
         padding: 16px;
       }
+
       @media screen and (min-width: $screen_md) {
         display: table-row;
       }
@@ -45,6 +53,7 @@
       margin-top: 16px;
       margin-bottom: 16px;
       border-radius: 6px;
+
       @media screen and (min-width: $screen_md) {
         display: table-row;
         height: 64px;
@@ -62,39 +71,57 @@
     letter-spacing: 0.2px;
     margin-top: 16px;
     margin-left: 16px;
+
     &::before {
       line-height: 16px;
       color: $greyTextColor;
       display: block;
       margin-bottom: 4px;
       white-space: nowrap;
+
       @media screen and (min-width: $screen_md) {
         display: none;
       }
     }
+
     &:first-child {
+      @media screen and (min-width: $screen_md) {
+        width: 45%;
+      }
+
       &::before {
         content: 'Ремонтные услуги';
       }
     }
+
     &:nth-child(2) {
+      @media screen and (min-width: $screen_md) {
+        width: 20%;
+      }
       &::before {
         content: 'Цена';
       }
     }
+
     &:nth-child(3) {
+      @media screen and (min-width: $screen_md) {
+        width: 20%;
+      }
       &::before {
         content: 'Срок';
       }
     }
+
     &:last-child {
       position: absolute;
       bottom: 16px;
       right: 16px;
+
       @media screen and (min-width: $screen_md) {
         display: table-cell;
         position: relative;
         inset: 0;
+        width: 15%;
       }
     }
   }
@@ -106,6 +133,7 @@
     width: calc(100% - 48px);
     margin-inline: 24px;
   }
+
   @media screen and (min-width: $screen_lg) {
     width: calc(100% - 62px);
     margin-inline: 32px;
@@ -120,6 +148,7 @@
       padding: 16px;
     }
   }
+
   &:not(:last-child) {
     td {
       @media screen and (min-width: $screen_md) {
@@ -149,6 +178,7 @@
       }
     }
   }
+
   @media screen and (min-width: $screen_md) {
     &:first-child {
       td {
@@ -172,7 +202,6 @@
     }
   }
 }
-
 
 .price {
   &__info {
@@ -202,7 +231,8 @@
   }
 
   &__arrow {
-    background: url('data:image/svg+xml,<svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.8 4.99994L0.791554 2.229C0.3641 1.83529 0.361125 1.16138 0.785088 0.763917L0.920293 0.637162C1.30321 0.278177 1.89851 0.276333 2.28364 0.632939L6.93812 4.94264C6.9715 4.97355 6.9715 5.02633 6.93812 5.05723L2.34674 9.30851C1.92606 9.69803 1.27582 9.69601 0.857554 9.30389C0.394457 8.86974 0.397706 8.13363 0.864616 7.70358L3.8 4.99994Z" fill="%23FF3E79"/></svg>') no-repeat;
+    background: url('data:image/svg+xml,<svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.8 4.99994L0.791554 2.229C0.3641 1.83529 0.361125 1.16138 0.785088 0.763917L0.920293 0.637162C1.30321 0.278177 1.89851 0.276333 2.28364 0.632939L6.93812 4.94264C6.9715 4.97355 6.9715 5.02633 6.93812 5.05723L2.34674 9.30851C1.92606 9.69803 1.27582 9.69601 0.857554 9.30389C0.394457 8.86974 0.397706 8.13363 0.864616 7.70358L3.8 4.99994Z" fill="%23FF3E79"/></svg>')
+      no-repeat;
     width: 7px;
     height: 10px;
     display: inline-block;

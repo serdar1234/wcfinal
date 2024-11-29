@@ -29,6 +29,7 @@
     }
     @media screen and (min-width: $screen-md) {
       height: auto;
+      margin-bottom: 50px;
       &::after,
       &::before {
         display: none;

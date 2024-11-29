@@ -19,7 +19,9 @@ import { changeActiveBtn } from './sidebarBtns.js'
 import { changeActiveScrollLink } from './scrollMenuLinks.js'
 import { toggleText } from './readMore.js'
 import { rearrangeFigure } from './rearrangeFigure.js'
+import { footerTeam } from './variables';
 
+footerTeam.innerHTML = `&copy; ${new Date().getFullYear()} CPS<br>Разработано командой Apesong`;
 brandsButton.addEventListener('click', () => {
   toggleBrandsFunction(brandText, brandsList, brandsArrowIcon)
 })
@@ -85,4 +87,4 @@ window.addEventListener('resize', function () {
       initializeSwipers()
     }
   }
-})
+});

@@ -15,6 +15,7 @@
 @import './swiper.scss';
 @import './sidebar.scss';
 @import './price.scss';
+@import './footer.scss';
 
 * {
   margin: 0;
@@ -41,7 +42,8 @@ body * {
 }
 
 header,
-main {
+main, 
+footer {
   position: relative;
   max-width: 1194px;
   margin: 0 auto;

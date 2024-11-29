@@ -2,6 +2,10 @@
 @import './colors.scss';
 
 .price.swiper-section {
+  margin-bottom: 40px;
+  @media screen and (min-width: $screen-md) {
+    margin-bottom: 48px;
+  }
   .swiper {
     height: 260px;
     @media screen and (min-width: $screen-md) {

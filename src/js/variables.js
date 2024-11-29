@@ -39,3 +39,5 @@ export const readButton = firstBlock.querySelector(".first-block__button");
 export const buttonText = readButton.querySelector(".first-block__read-more");
 export const buttonArrow = readButton.querySelector(".arrow-icon");
 
+// Footer
+export const footerTeam = document.querySelector('.footer__team > p');

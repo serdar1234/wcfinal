@@ -37,8 +37,9 @@
       justify-content: flex-start;
       width: 260px;
       height: 200px;
-      background-color: red;
-      margin: 16px;
+      background-color: $white;
+      margin-top: 16px;
+      margin-bottom: 16px;
       border-radius: 6px;
       @media screen and (min-width: $screen_md) {
         display: table-row;
@@ -88,7 +89,8 @@
       right: 16px;
       @media screen and (min-width: $screen_md) {
         display: table-cell;
-        position: static;
+        position: relative;
+        inset: 0;
       }
     }
   }
@@ -107,31 +109,61 @@
 }
 
 .price__item {
-  > td {
+  td {
     @media screen and (min-width: $screen_md) {
-      border-bottom: 5px solid $brandsItemBorderClr;
       background-color: $white;
       display: table-cell;
       padding: 16px;
     }
   }
-  &:first-child {
+  &:not(:last-child) {
     td {
-      &:first-child {
-        border-top-left-radius: 6px;
-      }
-      &:last-child {
-        border-top-right-radius: 6px;
+      @media screen and (min-width: $screen_md) {
+        border-bottom: 1px solid $brandsItemBorderClr;
+        &:first-child,
+        &:last-child {
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            width: 16px;
+            height: 1px;
+            background: $white;
+          }
+        }
+        &:first-child {
+          position: relative;
+          &::after {
+            left: 0;
+          }
+        }
+        &:last-child {
+          &::after {
+            right: 0;
+          }
+        }
       }
     }
   }
-  &:last-child {
-    td {
-      &:first-child {
-        border-bottom-left-radius: 6px;
+  @media screen and (min-width: $screen_md) {
+    &:first-child {
+      td {
+        &:first-child {
+          border-top-left-radius: 6px;
+        }
+        &:last-child {
+          border-top-right-radius: 6px;
+        }
       }
-      &:last-child {
-        border-bottom-right-radius: 6px;
+    }
+    &:last-child {
+      td {
+        &:first-child {
+          border-bottom-left-radius: 6px;
+        }
+        &:last-child {
+          border-bottom-right-radius: 6px;
+        }
       }
     }
   }

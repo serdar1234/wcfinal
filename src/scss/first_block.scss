@@ -16,9 +16,9 @@
     }
   }
   span {
-    margin-inline: 16px;
+    margin-left: 16px;
     @media screen and (min-width: $screen-md) {
-      margin-inline: 0;
+      margin-left: 0;
     }
   }
   @media screen and (min-width: $screen-md) {

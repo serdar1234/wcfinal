@@ -21,10 +21,14 @@
 .section {
   &__button {
     display: none;
-    padding-left: 2.85vw;
+    padding-left: 24px;
     @media screen and (min-width: $screen-md) {
       display: flex;
       margin-top: 0;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      padding-left: 32px;
     }
   }
   &__button-text {

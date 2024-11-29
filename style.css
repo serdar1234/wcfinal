@@ -538,11 +538,14 @@
 
 .section__button {
   display: none;
-  padding-left: 2.85vw; }
+  padding-left: 24px; }
   @media screen and (min-width: 768px) {
     .section__button {
       display: flex;
       margin-top: 0; } }
+  @media screen and (min-width: 1366px) {
+    .section__button {
+      padding-left: 32px; } }
 
 .section__button-text {
   margin-left: 10px;
@@ -827,10 +830,10 @@
     .first-block br:first-of-type {
       display: block; }
   .first-block span {
-    margin-inline: 16px; }
+    margin-left: 16px; }
     @media screen and (min-width: 768px) {
       .first-block span {
-        margin-inline: 0; } }
+        margin-left: 0; } }
   @media screen and (min-width: 768px) {
     .first-block {
       display: block;

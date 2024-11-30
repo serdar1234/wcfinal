@@ -28,6 +28,9 @@
   background-color: #fff; }
   .fog-of-war--active {
     display: block; }
+  .fog-of-war--modal {
+    display: block;
+    z-index: 2; }
 
 @media screen and (max-width: 767px) {
   /**
@@ -1426,6 +1429,7 @@
   background-color: #fff; }
   @media screen and (min-width: 768px) {
     .feedback {
+      box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
       position: fixed;
       left: calc(100% - 440px);
       top: 0;
@@ -1469,12 +1473,20 @@
       margin-top: 40px; } }
 
 .feedback__form {
-  margin: 32px;
-  width: 376px; }
+  margin: 16px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 32px); }
+  @media screen and (min-width: 768px) {
+    .feedback__form {
+      margin: 32px;
+      width: 376px; } }
   .feedback__form input,
   .feedback__form textarea {
     height: 46px;
-    width: 362px;
+    max-width: 100%;
+    flex-grow: 1;
     border: 1px solid #eaeaea;
     border-radius: 8px;
     margin-top: 16px;
@@ -1482,8 +1494,12 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px; }
+    @media screen and (min-width: 768px) {
+      .feedback__form input,
+      .feedback__form textarea {
+        width: 362px; } }
   .feedback__form textarea {
-    height: 118px;
+    height: 106px;
     padding-top: 12px;
     resize: none; }
 
@@ -1498,9 +1514,7 @@
     text-decoration: none; }
 
 .feedback__submit {
-  display: block;
-  position: relative;
-  left: 240px;
+  align-self: flex-end;
   background: #FF3E79 url(./static/dropdown.svg) 85% 50% no-repeat;
   width: 136px;
   height: 32px;
@@ -1542,6 +1556,9 @@ body * {
   line-height: inherit;
   letter-spacing: inherit;
   color: inherit; }
+
+body:has(dialog[open]) {
+  overflow: hidden; }
 
 header,
 main,

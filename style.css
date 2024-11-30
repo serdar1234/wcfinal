@@ -24,10 +24,8 @@
   height: 100%;
   z-index: 1;
   -webkit-filter: opacity(0.96);
-          filter: opacity(0.96); }
-  .fog-of-war img {
-    width: 100%;
-    height: 100%; }
+          filter: opacity(0.96);
+  background-color: #fff; }
   .fog-of-war--active {
     display: block; }
 
@@ -564,29 +562,6 @@
 
 .arrow-icon.arrow-icon--turned {
   transform: scale(-1); }
-
-.price__btn {
-  display: block;
-  position: relative;
-  background: #FF3E79 url(./static/dropdown.svg) 100px 11px no-repeat;
-  width: 119px;
-  height: 32px;
-  border: none;
-  border-radius: 16px;
-  transition: all 300ms ease-out; }
-  .price__btn::before {
-    content: 'ЗАКАЗАТЬ';
-    color: #fff;
-    position: absolute;
-    transform: translateY(-50%) translateX(-70%);
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 24px;
-    letter-spacing: -0.15px; }
-  .price__btn:hover {
-    -webkit-filter: invert(1);
-            filter: invert(1);
-    transform: scale(1.1); }
 
 /* Icons */
 .nav__icon--burger {
@@ -1376,6 +1351,29 @@
   display: inline-block;
   margin-left: 16px; }
 
+.price__btn {
+  display: block;
+  position: relative;
+  background: #FF3E79 url(./static/dropdown.svg) 100px 11px no-repeat;
+  width: 119px;
+  height: 32px;
+  border: none;
+  border-radius: 16px;
+  transition: all 300ms ease-out; }
+  .price__btn::before {
+    content: 'ЗАКАЗАТЬ';
+    color: #fff;
+    position: absolute;
+    transform: translateY(-50%) translateX(-70%);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px; }
+  .price__btn:hover {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    transform: scale(1.1); }
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -1416,6 +1414,113 @@
       .footer__info {
         text-align: right;
         margin-inline: 32px; } }
+
+.feedback {
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: 3;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff; }
+  @media screen and (min-width: 768px) {
+    .feedback {
+      position: fixed;
+      left: calc(100% - 440px);
+      top: 0;
+      width: 440px; } }
+  @media screen and (min-width: 1366px) {
+    .feedback {
+      left: calc(50% + 310px); } }
+
+.feedback__close-btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  position: absolute;
+  top: 24px;
+  left: 16px; }
+  @media screen and (min-width: 768px) {
+    .feedback__close-btn {
+      top: 32px;
+      left: -72px; } }
+
+.feedback__title {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  font-weight: bold;
+  margin-left: 16px;
+  margin-top: 104px; }
+  .feedback__title::before {
+    display: inline-block;
+    content: '';
+    height: 40px;
+    width: 4px;
+    background-color: #41f6d7;
+    position: absolute;
+    left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    transform: rotate(180deg); }
+  @media screen and (min-width: 768px) {
+    .feedback__title {
+      margin-left: 32px;
+      margin-top: 40px; } }
+
+.feedback__form {
+  margin: 32px;
+  width: 376px; }
+  .feedback__form input,
+  .feedback__form textarea {
+    height: 46px;
+    width: 362px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding-left: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px; }
+  .feedback__form textarea {
+    height: 118px;
+    padding-top: 12px;
+    resize: none; }
+
+.feedback__terms {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  margin-top: 16px;
+  color: #7e7e82; }
+  .feedback__terms a {
+    color: #FF3E79;
+    text-decoration: none; }
+
+.feedback__submit {
+  display: block;
+  position: relative;
+  left: 240px;
+  background: #FF3E79 url(./static/dropdown.svg) 85% 50% no-repeat;
+  width: 136px;
+  height: 32px;
+  margin-top: 24px;
+  border: none;
+  border-radius: 16px;
+  transition: all 300ms ease-out; }
+  .feedback__submit::before {
+    content: 'ОТПРАВИТЬ';
+    color: #fff;
+    position: absolute;
+    transform: translateY(-50%) translateX(-65%);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px; }
+  .feedback__submit:hover {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    transform: scale(1.1); }
 
 * {
   margin: 0;

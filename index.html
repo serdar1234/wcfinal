@@ -9,6 +9,24 @@
   <link href="style.css" rel="stylesheet"></head>
 
   <body>
+    <dialog class="feedback" id="feedback" role="dialog" aria-labelledby="feedbackTitle">
+      <button type="button" class="feedback__close-btn" aria-label="Закрыть форму"><i class="nav__icon nav__icon--x-burger"></i></button>
+      <h2 class="feedback__title">Обратная связь</h2>
+
+      <form id="feedbackForm" class="feedback__form" method="dialog">
+        <input type="text" id="name" name="name" required placeholder="Имя">
+
+        <input type="tel" id="phone" name="phone" placeholder="Телефон">
+
+        <input type="email" id="email" name="email" required placeholder="Электронная почта">
+
+        <textarea id="message" name="message" required placeholder="Сообщение"></textarea>
+        <p class="feedback__terms">Нажимая &quot;отправить&quot;, вы даете согласие на
+          <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+          <a href="">политикой конфиденциальности</a></p>
+        <button type="submit" class="feedback__submit"></button>
+      </form>
+    </dialog>
     <aside class="sidebar sidebar--hidden">
       <div class="sidebar__header">
         <ul class="nav__list">
@@ -50,7 +68,7 @@
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" aria-label="Напишите нам" href="javascript:void(0);">
+              <a class="nav__link nav__link--chat" aria-label="Напишите нам" href="javascript:void(0);">
                 <i class="nav__icon nav__icon--chat"></i>
               </a>
             </li>
@@ -76,9 +94,7 @@
         </ul>
       </div>
     </aside>
-    <div class="fog-of-war">
-      <img src="data:image/svg+xml;utf8,<svg width='1' height='1' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' fill='%23fff'/></svg>" alt="1x1 white pixel">
-    </div>
+    <div class="fog-of-war"> </div>
     <header>
       <nav class="nav">
         <div class="nav__left">
@@ -100,7 +116,7 @@
               <a class="nav__link" aria-label="Позвоните нам" href="javascript:void(0);"><i class="nav__icon nav__icon--call"></i></a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" aria-label="Напишите нам" href="javascript:void(0);"><i class="nav__icon nav__icon--chat"></i></a>
+              <a class="nav__link nav__link--chat" aria-label="Напишите нам" href="javascript:void(0);"><i class="nav__icon nav__icon--chat"></i></a>
             </li>
             <li class="nav__item">
               <a class="nav__link" aria-label="Профиль пользователя" href="javascript:void(0);"><i class="nav__icon nav__icon--profile"></i></a>
@@ -169,7 +185,7 @@
           aut rerum alias sit, optio voluptatem voluptas esse et! Sapiente,
           voluptatem mollitia?</span>
         <br>
-        <button class="first-block__button button">
+        <button type="button" class="first-block__button button">
           <span class="arrow-icon"></span>
           <p class="first-block__read-more">Читать далее</p>
         </button>
@@ -265,7 +281,7 @@
         </div>
       </section>
       
-      <section class="devices swiper-section"> 
+      <section class="devices swiper-section">
         <h2 class="section__heading">Ремонт различных видов техники</h2>
         <div class="swiper">
           <ul class="section__list swiper-wrapper" id="devices__list">
@@ -323,7 +339,7 @@
         </div>
       </section>
       
-      <section class="price swiper-section"> 
+      <section class="price swiper-section">
         <h2 class="section__heading">Цены на услуги</h2>
         <table class="swiper">
           <thead>
@@ -382,8 +398,11 @@
             </tr>
           </tfoot>
         </table>
-        <div class="price__info">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</div>
-        <div class="price__offer"><a href="javascript:void(0);">Получить коммерческое предложение <span class="price__arrow"></span></a></div>
+        <div class="price__info">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+          услугу. Для получения коммерческого предложения на постоянное
+          обслуживание, оставьте заявку.</div>
+        <div class="price__offer"><a href="javascript:void(0);">Получить коммерческое предложение
+            <span class="price__arrow"></span></a></div>
       </section>
     </main>
     <footer class="footer">
@@ -394,7 +413,8 @@
         <a href="javascript:void(0);">Политика конфиденциальности</a>
       </div>
       <div class="footer__info">
-        <p>Информация, размещенная на данной странице, не является публичной офертой</p>
+        <p>Информация, размещенная на данной странице, не является публичной
+          офертой</p>
       </div>
     </footer>
     <script media="screen and (max-width:767.98px)" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -4,8 +4,8 @@ export const SCREEN_LG = 1024;
 
 // Sidebar variables
 export const burgerBtn = document.querySelector('.nav__link--open-menu');
-export const xBurgerBtn = document.querySelector('.nav__link--close-menu');
 export const sideBar = document.querySelector('.sidebar');
+export const xBurgerBtn = sideBar.querySelector('.nav__link--close-menu');
 export const sidebarLinks = sideBar.querySelector('.sidebar__links > ul');
 export const sidebarButtons = sideBar.querySelector('.sidebar__button > ul');
 export const fogOfWar = document.querySelector('.fog-of-war');

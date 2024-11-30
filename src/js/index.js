@@ -11,7 +11,8 @@ import {
   devsButton,
   devsText,
   devsList,
-  devsArrowIcon
+  devsArrowIcon,
+  footerTeam,
 } from './variables.js'
 import { toggleBrandsFunction } from './brands.js'
 import { changeActiveLink } from './sidebarLinks.js'
@@ -19,7 +20,6 @@ import { changeActiveBtn } from './sidebarBtns.js'
 import { changeActiveScrollLink } from './scrollMenuLinks.js'
 import { toggleText } from './readMore.js'
 import { rearrangeFigure } from './rearrangeFigure.js'
-import { footerTeam } from './variables';
 
 footerTeam.innerHTML = `&copy; ${new Date().getFullYear()} CPS<br>Разработано командой Apesong`;
 brandsButton.addEventListener('click', () => {
@@ -88,3 +88,18 @@ window.addEventListener('resize', function () {
     }
   }
 });
+
+
+// dialog
+
+const chatBtn = document.querySelectorAll('.nav__link--chat');
+const feedback = document.querySelector('.feedback');
+const feedbackClose = feedback.querySelector('.feedback__close-btn');
+[...chatBtn].forEach( el => {
+  el.addEventListener('click', () => {
+    feedback.show();
+  })
+})
+feedbackClose.addEventListener('click', () => {
+  feedback.close();
+})

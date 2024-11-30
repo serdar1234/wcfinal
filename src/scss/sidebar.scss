@@ -4,6 +4,7 @@
 .sidebar.sidebar--hidden {
   left: -400px;
   opacity: 0;
+
   @media screen and (min-width: $screen-lg) {
     left: 0;
     opacity: 1;

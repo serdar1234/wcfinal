@@ -6,81 +6,35 @@
     <title>Document</title>
   </head>
   <body>
-    <aside class="sidebar sidebar--hidden">
-      <div class="sidebar__header">
-        <div>
-          <a
-            class="nav__link nav__link--close-menu"
-            aria-label="Закрыть меню"
-            href="javascript:void(0);"
-          >
-            <i class="nav__icon nav__icon--x-burger"></i>
-          </a>
-        </div>
-        <div class="heading">
-          <h2 class="heading__h1">Обратная связь</h2>
-        </div>
-      </div>
-      <div class="sidebar__links">
-        <ul>
-          <li class="sidebar__links--active"
-            ><a href="javascript:void(0);">Ремонт техники</a></li
-          >
-          <li><a href="javascript:void(0);">Услуги и сервисы</a></li>
-          <li><a href="javascript:void(0);">Корпоративным клиентам</a></li>
-          <li><a href="javascript:void(0);">Продавцам техники</a></li>
-          <li><a href="javascript:void(0);">Партнерам</a></li>
-          <li><a href="javascript:void(0);">Производителям</a></li>
-          <li><a href="javascript:void(0);">Наши сервисные центры</a></li>
-          <li><a href="javascript:void(0);">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="sidebar__contacts">
-        <div>
-          <ul class="nav__list sidebar__list">
-            <li class="nav__item">
-              <a
-                class="nav__link"
-                aria-label="Позвоните нам"
-                href="javascript:void(0);"
-              >
-                <i class="nav__icon nav__icon--call"></i>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a
-                class="nav__link"
-                aria-label="Напишите нам"
-                href="javascript:void(0);"
-              >
-                <i class="nav__icon nav__icon--chat"></i>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a
-                class="nav__link"
-                aria-label="Профиль пользователя"
-                href="javascript:void(0);"
-              >
-                <i class="nav__icon nav__icon--profile"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="sidebar__links sidebar__links--mailto">
-          <a href="mailto:mail@cps.com">mail@cps.com</a>
-        </div>
-        <div class="sidebar__phone-num">
-          <a href="tel:88008908900">8 800 890 8900</a>
-        </div>
-      </div>
-      <div class="sidebar__button">
-        <ul>
-          <li><button type="button" disabled>RU</button></li>
-          <li><button type="button">EN</button></li>
-          <li><button type="button">CH</button></li>
-        </ul>
-      </div>
-    </aside>
+    <dialog id="feedback" role="dialog" aria-labelledby="feedbackTitle">
+      <button
+        type="button"
+        class="nav__link nav__link--close-menu"
+        aria-label="Закрыть форму"
+      ></button>
+      <h2 id="feedbackTitle">Обратная связь</h2>
+
+      <form id="feedbackForm" method="post" action="/submit-feedback">
+        <input type="text" id="name" name="name" required placeholder="Имя" />
+
+        <input type="tel" id="phone" name="phone" placeholder="Телефон" />
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Электронная почта"
+        />
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Сообщение"
+        ></textarea>
+        <p class="feedback__terms">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="">политикой конфиденциальности</a></p>
+        <button type="submit"></button>
+      </form>
+    </dialog>
+
   </body>
 </html>

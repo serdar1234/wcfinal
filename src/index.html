@@ -6,12 +6,53 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
 
   <body>
+    <dialog
+      class="feedback"
+      id="feedback"
+      role="dialog"
+      aria-labelledby="feedbackTitle"
+    >
+      <button
+        type="button"
+        class="feedback__close-btn"
+        aria-label="Закрыть форму"
+        ><i class="nav__icon nav__icon--x-burger"></i
+      ></button>
+      <h2 class="feedback__title">Обратная связь</h2>
+
+      <form id="feedbackForm" class="feedback__form" method="dialog">
+        <input type="text" id="name" name="name" required placeholder="Имя" />
+
+        <input type="tel" id="phone" name="phone" placeholder="Телефон" />
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Электронная почта"
+        />
+
+        <textarea
+          id="message"
+          name="message"
+          required
+          placeholder="Сообщение"
+        ></textarea>
+        <p class="feedback__terms"
+          >Нажимая &quot;отправить&quot;, вы даете согласие на
+          <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+          <a href="">политикой конфиденциальности</a></p
+        >
+        <button type="submit" class="feedback__submit"></button>
+      </form>
+    </dialog>
     <aside class="sidebar sidebar--hidden">
       <div class="sidebar__header">
         <ul class="nav__list">
@@ -38,7 +79,9 @@
       </div>
       <div class="sidebar__links">
         <ul>
-          <li class="sidebar__links--active"><a href="javascript:void(0);">Ремонт техники</a></li>
+          <li class="sidebar__links--active"
+            ><a href="javascript:void(0);">Ремонт техники</a></li
+          >
           <li><a href="javascript:void(0);">Услуги и сервисы</a></li>
           <li><a href="javascript:void(0);">Корпоративным клиентам</a></li>
           <li><a href="javascript:void(0);">Продавцам техники</a></li>
@@ -52,17 +95,29 @@
         <div>
           <ul class="nav__list sidebar__list">
             <li class="nav__item">
-              <a class="nav__link" aria-label="Позвоните нам" href="javascript:void(0);">
+              <a
+                class="nav__link"
+                aria-label="Позвоните нам"
+                href="javascript:void(0);"
+              >
                 <i class="nav__icon nav__icon--call"></i>
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" aria-label="Напишите нам" href="javascript:void(0);">
+              <a
+                class="nav__link nav__link--chat"
+                aria-label="Напишите нам"
+                href="javascript:void(0);"
+              >
                 <i class="nav__icon nav__icon--chat"></i>
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" aria-label="Профиль пользователя" href="javascript:void(0);">
+              <a
+                class="nav__link"
+                aria-label="Профиль пользователя"
+                href="javascript:void(0);"
+              >
                 <i class="nav__icon nav__icon--profile"></i>
               </a>
             </li>
@@ -83,12 +138,7 @@
         </ul>
       </div>
     </aside>
-    <div class="fog-of-war">
-      <img
-        src="data:image/svg+xml;utf8,<svg width='1' height='1' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' fill='%23fff'/></svg>"
-        alt="1x1 white pixel"
-      />
-    </div>
+    <div class="fog-of-war"> </div>
     <header>
       <nav class="nav">
         <div class="nav__left">
@@ -114,17 +164,26 @@
         <div class="nav__right">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" aria-label="Позвоните нам" href="javascript:void(0);"
+              <a
+                class="nav__link"
+                aria-label="Позвоните нам"
+                href="javascript:void(0);"
                 ><i class="nav__icon nav__icon--call"></i
               ></a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" aria-label="Напишите нам" href="javascript:void(0);"
+              <a
+                class="nav__link nav__link--chat"
+                aria-label="Напишите нам"
+                href="javascript:void(0);"
                 ><i class="nav__icon nav__icon--chat"></i
               ></a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" aria-label="Профиль пользователя" href="javascript:void(0);"
+              <a
+                class="nav__link"
+                aria-label="Профиль пользователя"
+                href="javascript:void(0);"
                 ><i class="nav__icon nav__icon--profile"></i
               ></a>
             </li>
@@ -132,13 +191,21 @@
               <div class="nav__divider-img"></div>
             </li>
             <li class="nav__item">
-              <a class="nav__link" aria-label="Оставить заявку" href="javascript:void(0);">
+              <a
+                class="nav__link"
+                aria-label="Оставить заявку"
+                href="javascript:void(0);"
+              >
                 <span class="nav__text">Оставить заявку</span>
                 <i class="nav__icon nav__icon--repair"></i>
               </a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" aria-label="Статус ремонта" href="javascript:void(0);">
+              <a
+                class="nav__link"
+                aria-label="Статус ремонта"
+                href="javascript:void(0);"
+              >
                 <span class="nav__text">Статус ремонта</span>
                 <i class="nav__icon nav__icon--checkstatus"></i>
               </a>
@@ -150,13 +217,24 @@
         <h1 class="heading__h1">Услуги и сервисы</h1>
       </div>
       <div class="scroll-menu">
-        <a href="javascript:void(0);" class="scroll-menu__item scroll-menu__item--active">
+        <a
+          href="javascript:void(0);"
+          class="scroll-menu__item scroll-menu__item--active"
+        >
           Ремонтируемые устройства</a
         >
-        <a href="javascript:void(0);" class="scroll-menu__item">Дополнительные услуги</a>
-        <a href="javascript:void(0);" class="scroll-menu__item">Цены на услуги</a>
-        <a href="javascript:void(0);" class="scroll-menu__item">Специальные цены</a>
-        <a href="javascript:void(0);" class="scroll-menu__item">Адреса сервисных центров</a>
+        <a href="javascript:void(0);" class="scroll-menu__item"
+          >Дополнительные услуги</a
+        >
+        <a href="javascript:void(0);" class="scroll-menu__item"
+          >Цены на услуги</a
+        >
+        <a href="javascript:void(0);" class="scroll-menu__item"
+          >Специальные цены</a
+        >
+        <a href="javascript:void(0);" class="scroll-menu__item"
+          >Адреса сервисных центров</a
+        >
         <a href="javascript:void(0);" class="scroll-menu__item">Отзывы</a>
       </div>
     </header>
@@ -225,7 +303,7 @@
           voluptatem mollitia?</span
         >
         <br />
-        <button class="first-block__button button">
+        <button type="button" class="first-block__button button">
           <span class="arrow-icon"></span>
           <p class="first-block__read-more">Читать далее</p>
         </button>
@@ -333,65 +411,87 @@
         </div>
       </section>
       <!-- Devices -->
-      <section class="devices swiper-section"> 
+      <section class="devices swiper-section">
         <h2 class="section__heading">Ремонт различных видов техники</h2>
         <div class="swiper">
           <ul class="section__list swiper-wrapper" id="devices__list">
             <div class="swiper-slide">
               <li class="section__item">
-                <a class="section__link" href="javascript:void(0);">Ремонт ноутбуков</a>
+                <a class="section__link" href="javascript:void(0);"
+                  >Ремонт ноутбуков</a
+                >
               </li>
             </div>
             <div class="swiper-slide">
               <li class="section__item">
-                <a class="section__link" href="javascript:void(0);">Ремонт планшетов</a>
+                <a class="section__link" href="javascript:void(0);"
+                  >Ремонт планшетов</a
+                >
               </li>
             </div>
             <div class="swiper-slide">
               <li class="section__item">
-                <a class="section__link" href="javascript:void(0);">Ремонт мониторов</a>
+                <a class="section__link" href="javascript:void(0);"
+                  >Ремонт мониторов</a
+                >
               </li>
             </div>
             <div class="swiper-slide">
               <li class="section__item">
-                <a class="section__link" href="javascript:void(0);">Ремонт ПК</a>
+                <a class="section__link" href="javascript:void(0);"
+                  >Ремонт ПК</a
+                >
               </li>
             </div>
             <div class="swiper-slide">
               <li class="section__item">
-                <a class="section__link" href="javascript:void(0);">Ремонт принтеров</a>
+                <a class="section__link" href="javascript:void(0);"
+                  >Ремонт принтеров</a
+                >
               </li>
             </div>
             <div class="swiper-slide">
               <li class="section__item">
-                <a class="section__link" href="javascript:void(0);">Ремонт смартфонов</a>
+                <a class="section__link" href="javascript:void(0);"
+                  >Ремонт смартфонов</a
+                >
               </li>
             </div>
             <div class="swiper-slide">
               <li class="section__item">
-                <a class="section__link" href="javascript:void(0);">Ремонт ноутбуков</a>
+                <a class="section__link" href="javascript:void(0);"
+                  >Ремонт ноутбуков</a
+                >
               </li>
             </div>
             <div class="swiper-slide">
               <li class="section__item">
-                <a class="section__link" href="javascript:void(0);">Ремонт планшетов</a>
+                <a class="section__link" href="javascript:void(0);"
+                  >Ремонт планшетов</a
+                >
               </li>
             </div>
             <div class="swiper-slide">
               <li class="section__item">
-                <a class="section__link" href="javascript:void(0);">Ремонт мониторов</a>
+                <a class="section__link" href="javascript:void(0);"
+                  >Ремонт мониторов</a
+                >
               </li>
             </div>
           </ul>
           <div class="swiper-pagination"></div>
-          <button type="button" class="section__button button" id="devices__btn">
+          <button
+            type="button"
+            class="section__button button"
+            id="devices__btn"
+          >
             <span class="arrow-icon"> </span>
             <p class="section__button-text">Показать все</p>
           </button>
         </div>
       </section>
       <!-- Price -->
-      <section class="price swiper-section"> 
+      <section class="price swiper-section">
         <h2 class="section__heading">Цены на услуги</h2>
         <table class="swiper">
           <thead>
@@ -450,19 +550,30 @@
             </tr>
           </tfoot>
         </table>
-        <div class="price__info">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</div>
-        <div class="price__offer"><a href="javascript:void(0);">Получить коммерческое предложение <span class="price__arrow"></span></a></div>
+        <div class="price__info"
+          >Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную
+          услугу. Для получения коммерческого предложения на постоянное
+          обслуживание, оставьте заявку.</div
+        >
+        <div class="price__offer"
+          ><a href="javascript:void(0);"
+            >Получить коммерческое предложение
+            <span class="price__arrow"></span></a
+        ></div>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__team">
-        <p>&copy; 1999 CPS<br>Разработано командой Apesong</p>
+        <p>&copy; 1999 CPS<br />Разработано командой Apesong</p>
       </div>
       <div class="footer__policy">
         <a href="javascript:void(0);">Политика конфиденциальности</a>
       </div>
       <div class="footer__info">
-        <p>Информация, размещенная на данной странице, не является публичной офертой</p>
+        <p
+          >Информация, размещенная на данной странице, не является публичной
+          офертой</p
+        >
       </div>
     </footer>
     <script

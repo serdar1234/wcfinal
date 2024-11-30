@@ -41,3 +41,8 @@ export const buttonArrow = readButton.querySelector(".arrow-icon");
 
 // Footer
 export const footerTeam = document.querySelector('.footer__team > p');
+
+// Modal Feedback
+export const chatBtn = document.querySelectorAll('.nav__link--chat');
+export const feedback = document.querySelector('.feedback');
+export const feedbackCloseBtn = feedback.querySelector('.feedback__close-btn');

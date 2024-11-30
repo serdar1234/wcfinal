@@ -3,7 +3,6 @@ import { burgerFunction } from './burger.js'
 import {
   SCREEN_MD,
   brandsButton,
-  readButton,
   brandText,
   brandsList,
   brandsArrowIcon,
@@ -20,19 +19,23 @@ import { changeActiveBtn } from './sidebarBtns.js'
 import { changeActiveScrollLink } from './scrollMenuLinks.js'
 import { toggleText } from './readMore.js'
 import { rearrangeFigure } from './rearrangeFigure.js'
+import { feedbackFn } from './feedback.js'
 
 footerTeam.innerHTML = `&copy; ${new Date().getFullYear()} CPS<br>Разработано командой Apesong`;
+
 brandsButton.addEventListener('click', () => {
   toggleBrandsFunction(brandText, brandsList, brandsArrowIcon)
 })
 devsButton.addEventListener('click', () => {
   toggleBrandsFunction(devsText, devsList, devsArrowIcon)
 })
-readButton.addEventListener('click', toggleText)
+
+toggleText()
 burgerFunction()
 changeActiveLink()
 changeActiveBtn()
 changeActiveScrollLink()
+feedbackFn()
 rearrangeFigure()
 // Listen for resize events
 window.addEventListener('resize', rearrangeFigure)
@@ -88,18 +91,3 @@ window.addEventListener('resize', function () {
     }
   }
 });
-
-
-// dialog
-
-const chatBtn = document.querySelectorAll('.nav__link--chat');
-const feedback = document.querySelector('.feedback');
-const feedbackClose = feedback.querySelector('.feedback__close-btn');
-[...chatBtn].forEach( el => {
-  el.addEventListener('click', () => {
-    feedback.show();
-  })
-})
-feedbackClose.addEventListener('click', () => {
-  feedback.close();
-})

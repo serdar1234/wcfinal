@@ -42,6 +42,10 @@ body * {
   color: inherit;
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 header,
 main, 
 footer {

@@ -12,5 +12,9 @@
     &--active {
       display: block;
     }
+    &--modal {
+      display: block;
+      z-index: 2;
+    }
   } 
   

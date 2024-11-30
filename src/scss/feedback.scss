@@ -11,6 +11,7 @@
   width: 100%;
   background-color: $white;
   @media screen and (min-width: $screen-md) {
+    box-shadow: 16px 0 52px 0 $sidebarShadowClr;
     position: fixed;
     left: calc(100% - 440px);
     top: 0;
@@ -59,12 +60,20 @@
 }
 
 .feedback__form {
-  margin: 32px;
-  width: 376px;
+  margin: 16px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 32px);
+  @media screen and (min-width: $screen-md) {
+    margin: 32px;
+    width: 376px;
+  }
   input,
   textarea {
     height: 46px;
-    width: 362px;
+    max-width: 100%;
+    flex-grow: 1;
     border: 1px solid $brandsItemBorderClr;
     border-radius: 8px;
     margin-top: 16px;
@@ -72,9 +81,12 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
+    @media screen and (min-width: $screen-md) {
+      width: 362px;
+    }
   }
   textarea {
-    height: 118px;
+    height: 106px;
     padding-top: 12px;
     resize: none;
   }
@@ -92,11 +104,9 @@
       text-decoration: none;
     }
   }
-  
+
   &__submit {
-    display: block;
-    position: relative;
-    left: 240px;
+    align-self: flex-end;
     background: $rose url(../img/dropdown.svg) 85% 50% no-repeat;
     width: 136px;
     height: 32px;
@@ -114,11 +124,9 @@
       letter-spacing: -0.15px;
     }
     transition: all 300ms ease-out;
-      &:hover {
-        filter: invert(1);
-        transform: scale(1.1);
-      }
+    &:hover {
+      filter: invert(1);
+      transform: scale(1.1);
+    }
   }
 }
-
-

@@ -20,6 +20,9 @@
   @media screen and (min-width: $screen-xxl) {
     left: calc(50% + 310px);
   }
+  @media screen and (min-width: $screen-md) and (max-height: 560px) {
+    overflow: auto;
+  }
 }
 
 .feedback__close-btn {
@@ -32,9 +35,9 @@
     top: 32px;
     left: -72px;
   }
-  // @media screen and (max-height: 574px) {
-  //   top: 2px;
-  // }
+  @media screen and (min-width: $screen-md) and (max-height: 560px) {
+    left: 368px;
+  }
 }
 
 .feedback__title {
@@ -56,15 +59,10 @@
     border-bottom-left-radius: 4px;
     transform: rotate(180deg);
   }
-  // @media screen and (max-height: 574px) {
-  //   margin-top: 44px;
-  // }
+
   @media screen and (min-width: $screen-md) {
     margin-left: 32px;
     margin-top: 40px;
-    // @media screen and (max-height: 574px) {
-    //   margin-top: 0;
-    // }
   }
 }
 
@@ -78,9 +76,7 @@
     margin: 32px;
     width: 376px;
   }
-  // @media screen and (max-height: 574px) {
-  //   margin-top: 0;
-  // }
+
   input,
   textarea {
     height: 46px;

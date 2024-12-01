@@ -44,9 +44,9 @@ export function dialogFn(arr) {
   })
   fog.addEventListener('click', () => {
     if (fog.classList.contains('fog-of-war--modal')) {
-      fog.classList.remove('fog-of-war--modal');
-      [...dialogs].forEach(el => {
-        el.close();
+      fog.classList.remove('fog-of-war--modal')
+      ;[...dialogs].forEach((el) => {
+        el.close()
       })
     }
   })

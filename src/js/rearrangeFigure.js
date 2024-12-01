@@ -1,6 +1,6 @@
-import { firstBlock } from "./variables";
-const figure = firstBlock.querySelector('.first-block__figure');
-let figureMoved = false // flag to track if the figure has been moved
+import { firstBlock } from './variables'
+const figure = firstBlock.querySelector('.first-block__figure')
+let figureMoved = false
 
 export function rearrangeFigure() {
   if (window.innerWidth < 768 && !figureMoved) {

@@ -6,35 +6,48 @@
     <title>Document</title>
   </head>
   <body>
-    <dialog id="feedback" role="dialog" aria-labelledby="feedbackTitle">
+    <dialog
+      class="feedback"
+      id="modal-call"
+      role="dialog"
+      aria-labelledby="feedbackTitle"
+    >
       <button
         type="button"
-        class="nav__link nav__link--close-menu"
-        aria-label="Закрыть форму"
+        class="feedback__close-btn"
+        id="modal-call__close-btn"
+        aria-label="Закрыть"
+        ><i class="nav__icon nav__icon--x-burger"></i
       ></button>
-      <h2 id="feedbackTitle">Обратная связь</h2>
+      <h2 class="feedback__title">Заказать звонок</h2>
 
-      <form id="feedbackForm" method="post" action="/submit-feedback">
-        <input type="text" id="name" name="name" required placeholder="Имя" />
-
-        <input type="tel" id="phone" name="phone" placeholder="Телефон" />
-
+      <form
+        id="modal-call__form"
+        class="feedback__form"
+        method="dialog"
+        autocomplete="off"
+      >
         <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Электронная почта"
+          type="tel"
+          id="modal-call__phone"
+          name="phone"
+          placeholder="Телефон"
+          pattern="\d+"
+          title="вводите только цифры"
         />
 
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Сообщение"
-        ></textarea>
-        <p class="feedback__terms">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href="">политикой конфиденциальности</a></p>
-        <button type="submit"></button>
+        <p class="feedback__terms"
+          >Нажимая &quot;отправить&quot;, вы даете согласие на
+          <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+          <a href="">политикой конфиденциальности</a></p
+        >
+        <button
+          type="submit"
+          aria-label="Отправить"
+          class="feedback__submit"
+          value="submit"
+        ></button>
       </form>
     </dialog>
-
   </body>
 </html>

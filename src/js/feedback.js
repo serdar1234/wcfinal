@@ -1,42 +1,65 @@
 import {
+  dialogs,
   fogOfWar,
-  chatBtn,
-  feedback,
-  feedbackCloseBtn,
   sideBar,
   swiperContainers,
-  feedbackForm,
-} from './variables.js'
+  chatBtn,
+  feedbackCloseBtn,
+  feedback,
+  feedbackForm
+} from './variables'
 
-const closeFeedback = () => {
-  feedback.close()
-  fogOfWar.classList.remove('fog-of-war--modal')
+const arrayOfVariables = [
+  dialogs,
+  fogOfWar,
+  sideBar,
+  swiperContainers,
+  chatBtn,
+  feedbackCloseBtn,
+  feedback,
+  feedbackForm
+]
+
+const closeDialog = (dialog, fog) => {
+  dialog.close()
+  fog.classList.remove('fog-of-war--modal')
 }
 
-export function feedbackFn() {
-  ;[...chatBtn].forEach((el) => {
+export function dialogFn(arr) {
+  const [dialogs, fog, sidebar, swipers, openbtn, closebtn, dialog, form] = arr
+
+  ;[...openbtn].forEach((el) => {
     el.addEventListener('click', () => {
-      feedback.show()
-      fogOfWar.classList.add('fog-of-war--modal')
-      fogOfWar.classList.remove('fog-of-war--active')
-      if (!sideBar.classList.contains('sidebar--hidden')) {
-        sideBar.classList.add('sidebar--hidden')
-        ;[...swiperContainers].forEach((el) => {
+      dialog.show()
+      fog.classList.add('fog-of-war--modal')
+      fog.classList.remove('fog-of-war--active')
+
+      if (!sidebar.classList.contains('sidebar--hidden')) {
+        sidebar.classList.add('sidebar--hidden')
+        ;[...swipers].forEach((el) => {
           el.classList.remove('swiper--hidden')
         })
       }
     })
   })
-  feedbackCloseBtn.addEventListener('click', closeFeedback)
-  fogOfWar.addEventListener('click', () => {
-    if (fogOfWar.classList.contains('fog-of-war--modal')) {
-      closeFeedback()
+  fog.addEventListener('click', () => {
+    if (fog.classList.contains('fog-of-war--modal')) {
+      fog.classList.remove('fog-of-war--modal');
+      [...dialogs].forEach(el => {
+        el.close();
+      })
     }
-  });
-  feedback.addEventListener('submit', (evt) => {
-    evt.preventDefault();
-    fogOfWar.classList.remove('fog-of-war--modal');
-    closeFeedback();
-    feedbackForm.reset();
+  })
+  closebtn.addEventListener('click', () => {
+    closeDialog(dialog, fog)
+  })
+
+  dialog.addEventListener('submit', (evt) => {
+    evt.preventDefault()
+    fog.classList.remove('fog-of-war--modal')
+    closeDialog(dialog, fog)
+    form.reset()
   })
 }
+
+export const feedbackFn = dialogFn(arrayOfVariables)

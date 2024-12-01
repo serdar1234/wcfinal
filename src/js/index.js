@@ -11,7 +11,7 @@ import {
   devsText,
   devsList,
   devsArrowIcon,
-  footerTeam,
+  footerTeam
 } from './variables.js'
 import { toggleBrandsFunction } from './brands.js'
 import { changeActiveLink } from './sidebarLinks.js'
@@ -20,8 +20,9 @@ import { changeActiveScrollLink } from './scrollMenuLinks.js'
 import { toggleText } from './readMore.js'
 import { rearrangeFigure } from './rearrangeFigure.js'
 import { feedbackFn } from './feedback.js'
+import { callFn } from './callDialog.js'
 
-footerTeam.innerHTML = `&copy; ${new Date().getFullYear()} CPS<br>Разработано командой Apesong`;
+footerTeam.innerHTML = `&copy; ${new Date().getFullYear()} CPS<br>Разработано командой Apesong`
 
 brandsButton.addEventListener('click', () => {
   toggleBrandsFunction(brandText, brandsList, brandsArrowIcon)
@@ -35,7 +36,6 @@ burgerFunction()
 changeActiveLink()
 changeActiveBtn()
 changeActiveScrollLink()
-feedbackFn()
 rearrangeFigure()
 // Listen for resize events
 window.addEventListener('resize', rearrangeFigure)
@@ -90,4 +90,4 @@ window.addEventListener('resize', function () {
       initializeSwipers()
     }
   }
-});
+})

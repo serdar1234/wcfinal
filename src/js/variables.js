@@ -42,8 +42,17 @@ export const buttonArrow = readButton.querySelector(".arrow-icon");
 // Footer
 export const footerTeam = document.querySelector('.footer__team > p');
 
-// Modal Feedback
+// Modals
+export const dialogs = document.querySelectorAll('dialog');
+
+// Feedback
 export const chatBtn = document.querySelectorAll('.nav__link--chat');
-export const feedback = document.querySelector('.feedback');
-export const feedbackCloseBtn = feedback.querySelector('.feedback__close-btn');
-export const feedbackForm = feedback.querySelector('.feedback__form');
+export const feedback = document.querySelector('#feedback');
+export const feedbackCloseBtn = feedback.querySelector('#feedback__close-btn');
+export const feedbackForm = feedback.querySelector('#feedback__form');
+
+// Modal Call
+export const callBtn = document.querySelectorAll('.nav__link--call');
+export const callDialog = document.querySelector('#modal-call');
+export const callCloseBtn = callDialog.querySelector('#modal-call__close-btn');
+export const callForm = callDialog.querySelector('#modal-call__form');

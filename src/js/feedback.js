@@ -4,7 +4,8 @@ import {
   feedback,
   feedbackCloseBtn,
   sideBar,
-  swiperContainers
+  swiperContainers,
+  feedbackForm,
 } from './variables.js'
 
 const closeFeedback = () => {
@@ -31,5 +32,11 @@ export function feedbackFn() {
     if (fogOfWar.classList.contains('fog-of-war--modal')) {
       closeFeedback()
     }
+  });
+  feedback.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    fogOfWar.classList.remove('fog-of-war--modal');
+    closeFeedback();
+    feedbackForm.reset();
   })
 }

@@ -26,10 +26,10 @@
       ></button>
       <h2 class="feedback__title">Обратная связь</h2>
 
-      <form id="feedbackForm" class="feedback__form" method="dialog">
-        <input type="text" id="name" name="name" required placeholder="Имя" />
+      <form id="feedbackForm" class="feedback__form" method="dialog" autocomplete="off">
+        <input type="text" id="name" name="name" required autofocus placeholder="Имя" />
 
-        <input type="tel" id="phone" name="phone" placeholder="Телефон" />
+        <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\d+" title="вводите только цифры" />
 
         <input
           type="email"
@@ -50,7 +50,7 @@
           <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
           <a href="">политикой конфиденциальности</a></p
         >
-        <button type="submit" class="feedback__submit"></button>
+        <button type="submit" class="feedback__submit" value="submit"></button>
       </form>
     </dialog>
     <aside class="sidebar sidebar--hidden">

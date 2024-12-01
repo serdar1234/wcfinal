@@ -10,21 +10,34 @@
 
   <body>
     <dialog class="feedback" id="feedback" role="dialog" aria-labelledby="feedbackTitle">
-      <button type="button" class="feedback__close-btn" aria-label="Закрыть форму"><i class="nav__icon nav__icon--x-burger"></i></button>
+      <button type="button" class="feedback__close-btn" id="feedback__close-btn" aria-label="Закрыть форму"><i class="nav__icon nav__icon--x-burger"></i></button>
       <h2 class="feedback__title">Обратная связь</h2>
 
-      <form id="feedbackForm" class="feedback__form" method="dialog" autocomplete="off">
-        <input type="text" id="name" name="name" required autofocus placeholder="Имя">
+      <form id="feedback__form" class="feedback__form" method="dialog" autocomplete="off">
+        <input type="text" id="feedback__name" name="name" required autofocus placeholder="Имя">
 
-        <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\d+" title="вводите только цифры">
+        <input type="tel" id="feedback__phone" name="phone" placeholder="Телефон" pattern="\d+" title="вводите только цифры">
 
-        <input type="email" id="email" name="email" required placeholder="Электронная почта">
+        <input type="email" id="feedback__email" name="email" required placeholder="Электронная почта">
 
-        <textarea id="message" name="message" required placeholder="Сообщение"></textarea>
+        <textarea id="feedback__message" name="message" required placeholder="Сообщение"></textarea>
         <p class="feedback__terms">Нажимая &quot;отправить&quot;, вы даете согласие на
           <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
           <a href="">политикой конфиденциальности</a></p>
-        <button type="submit" class="feedback__submit" value="submit"></button>
+        <button type="submit" aria-label="Отправить форму" class="feedback__submit" value="submit"></button>
+      </form>
+    </dialog>
+    <dialog class="feedback" id="modal-call" role="dialog" aria-labelledby="feedbackTitle">
+      <button type="button" class="feedback__close-btn" id="modal-call__close-btn" aria-label="Закрыть"><i class="nav__icon nav__icon--x-burger"></i></button>
+      <h2 class="feedback__title">Заказать звонок</h2>
+
+      <form id="modal-call__form" class="feedback__form" method="dialog" autocomplete="off">
+        <input type="tel" id="modal-call__phone" name="phone" placeholder="Телефон" pattern="\d+" required title="вводите только цифры">
+
+        <p class="feedback__terms">Нажимая &quot;отправить&quot;, вы даете согласие на
+          <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+          <a href="">политикой конфиденциальности</a></p>
+        <button type="submit" aria-label="Отправить" class="feedback__submit" value="submit"></button>
       </form>
     </dialog>
     <aside class="sidebar sidebar--hidden">
@@ -63,7 +76,7 @@
         <div>
           <ul class="nav__list sidebar__list">
             <li class="nav__item">
-              <a class="nav__link" aria-label="Позвоните нам" href="javascript:void(0);">
+              <a class="nav__link nav__link--call" aria-label="Позвоните нам" href="javascript:void(0);">
                 <i class="nav__icon nav__icon--call"></i>
               </a>
             </li>
@@ -88,9 +101,9 @@
       </div>
       <div class="sidebar__button">
         <ul>
-          <li><button type="button" disabled="disabled">RU</button></li>
-          <li><button type="button">EN</button></li>
-          <li><button type="button">CH</button></li>
+          <li><button type="button" aria-label="Русский язык" disabled="disabled">RU</button></li>
+          <li><button type="button" aria-label="Английский язык">EN</button></li>
+          <li><button type="button" aria-label="Китайский язык">CH</button></li>
         </ul>
       </div>
     </aside>
@@ -113,7 +126,7 @@
         <div class="nav__right">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" aria-label="Позвоните нам" href="javascript:void(0);"><i class="nav__icon nav__icon--call"></i></a>
+              <a class="nav__link nav__link--call" aria-label="Позвоните нам" href="javascript:void(0);"><i class="nav__icon nav__icon--call"></i></a>
             </li>
             <li class="nav__item">
               <a class="nav__link nav__link--chat" aria-label="Напишите нам" href="javascript:void(0);"><i class="nav__icon nav__icon--chat"></i></a>
@@ -356,7 +369,7 @@
               <td>Бесплатно</td>
               <td>30 мин</td>
               <td>
-                <button type="button" class="price__btn"></button>
+                <button type="button" aria-label="Заказать" class="price__btn"></button>
               </td>
             </tr>
             <tr class="swiper-slide price__item">
@@ -364,7 +377,7 @@
               <td>1000 &#8381;</td>
               <td>30-120 мин</td>
               <td>
-                <button type="button" class="price__btn"></button>
+                <button type="button" aria-label="Заказать" class="price__btn"></button>
               </td>
             </tr>
             <tr class="swiper-slide price__item">
@@ -372,7 +385,7 @@
               <td>1000 &#8381;</td>
               <td>30-120 мин</td>
               <td>
-                <button type="button" class="price__btn"></button>
+                <button type="button" aria-label="Заказать" class="price__btn"></button>
               </td>
             </tr>
             <tr class="swiper-slide price__item">
@@ -380,7 +393,7 @@
               <td>1000 &#8381;</td>
               <td>30-120 мин</td>
               <td>
-                <button type="button" class="price__btn"></button>
+                <button type="button" aria-label="Заказать" class="price__btn"></button>
               </td>
             </tr>
             <tr class="swiper-slide price__item">
@@ -388,7 +401,7 @@
               <td>1000 &#8381;</td>
               <td>30-120 мин</td>
               <td>
-                <button type="button" class="price__btn"></button>
+                <button type="button" aria-label="Заказать" class="price__btn"></button>
               </td>
             </tr>
           </tbody>

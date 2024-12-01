@@ -20,7 +20,7 @@
   @media screen and (min-width: $screen-xxl) {
     left: calc(50% + 310px);
   }
-  @media screen and (min-width: $screen-md) and (max-height: 560px) {
+  @media screen and (max-height: $screen-vert) {
     overflow: auto;
   }
 }
@@ -31,12 +31,9 @@
   position: absolute;
   top: 24px;
   left: 16px;
-  @media screen and (min-width: $screen-md) {
+  @media screen and (min-width: $screen-md) and (min-height: $screen-vert-1) {
     top: 32px;
     left: -72px;
-  }
-  @media screen and (min-width: $screen-md) and (max-height: 560px) {
-    left: 368px;
   }
 }
 
@@ -60,7 +57,7 @@
     transform: rotate(180deg);
   }
 
-  @media screen and (min-width: $screen-md) {
+  @media screen and (min-width: $screen-md) and (min-height: $screen-vert-1) {
     margin-left: 32px;
     margin-top: 40px;
   }

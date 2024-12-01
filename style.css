@@ -1437,6 +1437,9 @@
   @media screen and (min-width: 1500px) {
     .feedback {
       left: calc(50% + 310px); } }
+  @media screen and (min-width: 768px) and (max-height: 560px) {
+    .feedback {
+      overflow: auto; } }
 
 .feedback__close-btn {
   background-color: rgba(0, 0, 0, 0);
@@ -1448,6 +1451,9 @@
     .feedback__close-btn {
       top: 32px;
       left: -72px; } }
+  @media screen and (min-width: 768px) and (max-height: 560px) {
+    .feedback__close-btn {
+      left: 368px; } }
 
 .feedback__title {
   font-size: 24px;

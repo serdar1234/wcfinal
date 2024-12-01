@@ -1434,7 +1434,7 @@
       left: calc(100% - 440px);
       top: 0;
       width: 440px; } }
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1500px) {
     .feedback {
       left: calc(50% + 310px); } }
 

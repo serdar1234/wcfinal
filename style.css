@@ -1020,12 +1020,9 @@
   @media screen and (min-width: 768px) {
     .swiper-section .swiper {
       height: auto;
-      margin-bottom: 26px; }
+      margin-bottom: 16px; }
       .swiper-section .swiper::after, .swiper-section .swiper::before {
         display: none; } }
-  @media screen and (min-width: 1366px) {
-    .swiper-section .swiper {
-      margin-bottom: 50px; } }
 
 .swiper-section .swiper.swiper--hidden {
   display: none;

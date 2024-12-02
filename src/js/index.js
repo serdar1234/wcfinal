@@ -98,8 +98,7 @@ window.addEventListener('resize', function () {
 const isSafariLatest =
   navigator.userAgent.includes('Safari') &&
   (navigator.userAgent.includes('Version/17') ||
-    navigator.userAgent.includes('Version/18'));
+    navigator.userAgent.includes('Version/18'))
 if (isSafariLatest) {
-  console.log(navigator.userAgent)
   navRight.classList.add('nav__right--top-0')
 }

@@ -11,7 +11,8 @@ import {
   devsText,
   devsList,
   devsArrowIcon,
-  footerTeam
+  footerTeam,
+  navRight
 } from './variables.js'
 
 import { toggleBrandsFunction } from './brands.js'
@@ -92,3 +93,13 @@ window.addEventListener('resize', function () {
     }
   }
 })
+
+// safari top bug fix
+const isSafariLatest =
+  navigator.userAgent.includes('Safari') &&
+  (navigator.userAgent.includes('Version/17') ||
+    navigator.userAgent.includes('Version/18'));
+if (isSafariLatest) {
+  console.log(navigator.userAgent)
+  navRight.classList.add('nav__right--top-0')
+}

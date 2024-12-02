@@ -6,31 +6,31 @@
   &--burger {
     background-image: url('../img/burger.svg');
   }
-  
+
   &--call {
     background-image: url('../img/call.svg');
   }
-  
+
   &--chat {
     background-image: url('../img/chat.svg');
   }
-  
+
   &--checkstatus {
     background-image: url('../img/checkstatus.svg');
   }
-  
+
   &--profile {
     background-image: url('../img/profile.svg');
   }
-  
+
   &--repair {
     background-image: url('../img/repair.svg');
   }
-  
+
   &--search {
     background-image: url('../img/search.svg');
   }
-  
+
   &--x-burger {
     background-image: url('../img/x-burger.svg');
   }
@@ -85,6 +85,7 @@
     right: 0px;
     top: 42px;
   }
+
   .nav__list {
     @media screen and (min-width: $screen-lg) {
       justify-content: flex-end;
@@ -100,6 +101,12 @@
         }
       }
     }
+  }
+}
+
+.nav__right.nav__right--top-0 {
+  @media screen and (min-width: $screen-lg) {
+    top: 0;
   }
 }
 
@@ -123,7 +130,7 @@
       box-shadow: none;
     }
   }
-  
+
   &__item {
     padding-top: 5px;
     @media screen and (min-width: $screen-md) {
@@ -133,13 +140,13 @@
       margin-right: 24px;
     }
   }
-  
+
   &__link {
     padding: 0;
     text-decoration: none;
     display: flex;
   }
-  
+
   &__icon {
     display: inline-block;
     width: 40px;
@@ -150,18 +157,18 @@
       transform: scale(1.1);
     }
   }
-  
+
   &__divider-img {
     background: url('../img/divider.svg') center no-repeat;
     width: 10px;
     height: 40px;
   }
-  
+
   &__logo {
     width: 97px;
     height: auto;
   }
-  
+
   &__text {
     display: none;
     @media screen and (min-width: $screen-lg) {

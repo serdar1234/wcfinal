@@ -1122,7 +1122,7 @@
     transition-property: transform;
     transition-timing-function: ease-in-out; }
     .sidebar__links ul li a:hover {
-      transform: translateX(8px) scale(1.1); }
+      transform: translateX(4px) translateY(4px); }
 
 .sidebar__links--active a {
   color: #7e7e82;

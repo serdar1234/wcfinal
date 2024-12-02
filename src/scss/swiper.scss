@@ -29,14 +29,11 @@
     }
     @media screen and (min-width: $screen-md) {
       height: auto;
-      margin-bottom: 26px;
+      margin-bottom: 16px;
       &::after,
       &::before {
         display: none;
       }
-    }
-    @media screen and (min-width: $screen-xl) {
-      margin-bottom: 50px;
     }
   }
 }

@@ -774,7 +774,7 @@
     background: linear-gradient(to left, rgba(0, 0, 0, 0), #f8f8f8) repeat-y; }
   @media screen and (min-width: 768px) {
     .scroll-menu {
-      margin-top: 32px; } }
+      margin-top: 16px; } }
   @media screen and (min-width: 1024px) {
     .scroll-menu {
       margin-top: 8px;
@@ -819,13 +819,13 @@
   @media screen and (min-width: 768px) {
     .first-block {
       display: block;
+      margin: 0;
       padding: 24px;
+      padding-bottom: 4px;
       line-height: 20px; } }
   @media screen and (min-width: 1024px) {
     .first-block {
-      padding: 0 24px;
-      margin-top: 0;
-      margin-bottom: 40px; } }
+      padding: 0 24px; } }
   .first-block::after {
     content: '';
     clear: both;
@@ -1020,9 +1020,12 @@
   @media screen and (min-width: 768px) {
     .swiper-section .swiper {
       height: auto;
-      margin-bottom: 50px; }
+      margin-bottom: 26px; }
       .swiper-section .swiper::after, .swiper-section .swiper::before {
         display: none; } }
+  @media screen and (min-width: 1366px) {
+    .swiper-section .swiper {
+      margin-bottom: 50px; } }
 
 .swiper-section .swiper.swiper--hidden {
   display: none;

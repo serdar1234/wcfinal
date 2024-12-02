@@ -85,7 +85,7 @@
         transition-property: transform;
         transition-timing-function: ease-in-out;
         &:hover {
-          transform: translateX(8px) scale(1.1);
+          transform: translateX(4px) translateY(4px) ;
         }
       }
     }

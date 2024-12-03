@@ -51,6 +51,7 @@ let swiper
 let swipersInitialized = false
 
 function initializeSwipers() {
+  while (swipers.length > 0) swipers.pop();
   if (window.matchMedia('(max-width:767.98px)').matches) {
     ;[...swiperContainers].forEach((container) => {
       swiper = new Swiper(container, {
@@ -63,6 +64,7 @@ function initializeSwipers() {
           dynamicMainBullets: 8
         }
       })
+
       swipers.push(swiper)
     })
     swipersInitialized = true
@@ -71,10 +73,9 @@ function initializeSwipers() {
 
 function destroySwipers() {
   swipers.forEach((swiper) => {
-    if (swiper) {
       swiper.destroy(true, true)
-    }
   })
+
   swipersInitialized = false
 }
 
